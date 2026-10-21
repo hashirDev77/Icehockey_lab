@@ -1,0 +1,2648 @@
+{
+  "generatedAt": "2026-10-21T15:49:34.751780+00:00",
+  "baseUrl": "https://sports-api.sportsdata365.com/msdata",
+  "sport": "ice_hockey",
+  "routeCount": 40,
+  "discoveredIds": {
+    "date": "2026-10-21",
+    "enrichmentType": "best_players",
+    "teamEnrichmentType": "events_last",
+    "managerId": 58284567,
+    "lineupPlayerId": 25961100,
+    "round": "1",
+    "searchQuery": "Maple Leafs",
+    "teamId": 58336109,
+    "playerId": 69552988,
+    "tournamentId": 40307999,
+    "eventId": 14124239,
+    "seasonId": 12009093,
+    "playerIdForEventStats": 47474035
+  },
+  "routes": [
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}",
+      "calledPath": "event/14124239",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 3813,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 3813,
+        "responseKind": "match object",
+        "topLevelKeys": [
+          "event"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"event\": {\"id\": 14124239, \"homeTeam\": {\"id\": 24645697, \"name\": \"Columbus Blue Jackets\", \"shortName\": \"Blue Jackets\", \"fullName\": null, \"nameCode\": \"CBJ\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 5207, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ce1126\", \"secondary\": \"#002654\", \"text\": \"#002654\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0648\\u0644\\u0648\\u0645\\u0628\\u0648\\u0633 \\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"bn\": \"\\u09ac\\u09cd\\u09b2\\u09c1 \\u099c\\u09cd\\u09af\\u09be\\u0995\\u09c7\\u099f\", \"hi\": \"\\u092c\\u094d\\u0932\\u0942 \\u091c\\u0948\\u0915\\u0947\\u091f\\u094d\\u0938\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 58336109, \"name\": \"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/best-players",
+      "calledPath": "event/14124239/best-players",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 17216,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 17216,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "bestHomeTeamPlayer",
+          "bestAwayTeamPlayer",
+          "leaderboard",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "leaderboard",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 10,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "label",
+          "player",
+          "team",
+          "value"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"bestHomeTeamPlayer\": {\"label\": \"pts\", \"player\": {\"id\": 54253772, \"name\": \"Charlie Coyle\", \"firstName\": \"Charlie\", \"lastName\": \"Coyle\", \"shortName\": \"C. Coyle\", \"position\": \"C\", \"gender\": \"M\", \"height\": 191, \"jerseyNumber\": \"3\", \"userCount\": 158, \"dateOfBirthTimestamp\": 699494400, \"marketValueCurrency\": \"EUR\", \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0634\\u0627\\u0631\\u0644\\u064a \\u0643\\u0648\\u064a\\u0644\", \"bn\": \"\\u099a\\u09be\\u09b0\\u09cd\\u09b2\\u09bf \\u0995\\u09cb\\u09af\\u09bc\\u09c7\\u09b2\", \"hi\": \"\\u091a\\u093e\\u0930\\u094d\\u0932\\u0940 \\u0915\\u094b\\u092f\\u0932\", \"ru\": \"\\u0427\\u0430\\u0440\\u043b\\u0438 \\u041a\\u043e\\u0439\\u043b\"}, \"shortNameTranslation\": {\"ar\": \"\\u062a. \\u0643\\u0648\\u064a\\u0644\", \"bn\": \"\\u09b8\\u09bf. \\u0995\\u09cb\\u09af\\u09bc\\u09c7\\u09b2\", \"hi\": \"\\u0938\\u0940. \\u0915\\u094b\\u092f\\u0932\", \"ru\": \"\\u0427. \\u041a\\u043e\\u0439\\u043b\"}}, \"team\": null}, \"team\": {\"id\": 24645697, \"name\": \"Columbus Blue Jackets\", \"shortName\": \"Blue Jackets\", \"fullName\": null, \"nameCode\": \"CBJ\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 5196, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ce1126\"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/enrichments",
+      "calledPath": "event/14124239/enrichments",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 934,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 934,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "types"
+        ],
+        "listKey": "types",
+        "listCount": 8,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "useCase"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"types\": [{\"type\": \"best_players\", \"useCase\": \"Match best-player ratings. Dedicated route: GET .../event/:id/best-players.\"}, {\"type\": \"best_players_summary\", \"useCase\": \"Condensed best-player summary. Fetch via GET .../enrichments/best_players_summary.\"}, {\"type\": \"h2h_events\", \"useCase\": \"The past meetings themselves, as a paged event list. For win/draw/loss counts instead, use GET .../event/:id/h2h \\u2014 it returns summary totals, not matches.\"}, {\"type\": \"highlights\", \"useCase\": \"Highlight / video links. Fetch via GET .../enrichments/highlights.\"}, {\"type\": \"series\", \"useCase\": \"Series or playoff event ids. Fetch via GET .../enrichments/series.\"}, {\"type\": \"shotmap\", \"useCase\": \"Shotmap coordinates. Fetch via GET .../enrichments/shotmap.\"}, {\"type\": \"team_streaks\", \"useCase\": \"Win/loss streaks around this match. Dedicated route: GET .../event/:id/team-streaks.\"}, {\"type\": \"votes\", \"useCase\": \"Fan vote totals. Fetch via GET .../enrichments/votes.\"}]}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/enrichments/{type}",
+      "calledPath": "event/14124239/enrichments/best_players",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 17216,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 17216,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "bestHomeTeamPlayer",
+          "bestAwayTeamPlayer",
+          "leaderboard",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "leaderboard",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 10,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "label",
+          "player",
+          "team",
+          "value"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"bestHomeTeamPlayer\": {\"label\": \"pts\", \"player\": {\"id\": 54253772, \"name\": \"Charlie Coyle\", \"firstName\": \"Charlie\", \"lastName\": \"Coyle\", \"shortName\": \"C. Coyle\", \"position\": \"C\", \"gender\": \"M\", \"height\": 191, \"jerseyNumber\": \"3\", \"userCount\": 158, \"dateOfBirthTimestamp\": 699494400, \"marketValueCurrency\": \"EUR\", \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0634\\u0627\\u0631\\u0644\\u064a \\u0643\\u0648\\u064a\\u0644\", \"bn\": \"\\u099a\\u09be\\u09b0\\u09cd\\u09b2\\u09bf \\u0995\\u09cb\\u09af\\u09bc\\u09c7\\u09b2\", \"hi\": \"\\u091a\\u093e\\u0930\\u094d\\u0932\\u0940 \\u0915\\u094b\\u092f\\u0932\", \"ru\": \"\\u0427\\u0430\\u0440\\u043b\\u0438 \\u041a\\u043e\\u0439\\u043b\"}, \"shortNameTranslation\": {\"ar\": \"\\u062a. \\u0643\\u0648\\u064a\\u0644\", \"bn\": \"\\u09b8\\u09bf. \\u0995\\u09cb\\u09af\\u09bc\\u09c7\\u09b2\", \"hi\": \"\\u0938\\u0940. \\u0915\\u094b\\u092f\\u0932\", \"ru\": \"\\u0427. \\u041a\\u043e\\u0439\\u043b\"}}, \"team\": null}, \"team\": {\"id\": 24645697, \"name\": \"Columbus Blue Jackets\", \"shortName\": \"Blue Jackets\", \"fullName\": null, \"nameCode\": \"CBJ\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 5196, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ce1126\"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/h2h",
+      "calledPath": "event/14124239/h2h",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 69,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 69,
+        "responseKind": "object (teamDuel, managerDuel)",
+        "topLevelKeys": [
+          "teamDuel",
+          "managerDuel"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"teamDuel\": {\"homeWins\": 6, \"awayWins\": 4, \"draws\": 0}, \"managerDuel\": null}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/incidents",
+      "calledPath": "event/14124239/incidents",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 9590,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 9590,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "incidents",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "incidents",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 26,
+          "totalPages": 6,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "time",
+          "timeMarker",
+          "timeSeconds",
+          "period",
+          "periodTimeSeconds",
+          "isHome",
+          "incidentType",
+          "incidentClass",
+          "player",
+          "playerIn",
+          "playerOut",
+          "assist",
+          "assists",
+          "penaltyDurationSeconds",
+          "penaltyType",
+          "homeScore",
+          "awayScore",
+          "reason",
+          "text",
+          "incidentKey"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"incidents\": [{\"time\": 3, \"timeMarker\": null, \"timeSeconds\": 158, \"period\": null, \"periodTimeSeconds\": 158, \"isHome\": true, \"incidentType\": \"goal\", \"incidentClass\": \"regular\", \"player\": {\"id\": 25961100, \"name\": \"Jake Christiansen\", \"firstName\": \"Jacob Christiansen\", \"lastName\": null, \"shortName\": \"J. Christiansen\", \"position\": \"D\", \"gender\": \"M\", \"height\": 183, \"jerseyNumber\": \"2\", \"userCount\": 7, \"dateOfBirthTimestamp\": 937094400, \"marketValueCurrency\": \"EUR\", \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062c\\u064a\\u0643 \\u0643\\u0631\\u064a\\u0633\\u062a\\u064a\\u0627\\u0646\\u0633\\u0646\", \"bn\": \"\\u099c\\u09c7\\u0995 \\u0995\\u09cd\\u09b0\\u09bf\\u09b6\\u09cd\\u099a\\u09bf\\u09af\\u09bc\\u09be\\u09a8\\u09b8\\u09c7\\u09a8\", \"hi\": \"\\u091c\\u0947\\u0915 \\u0915\\u094d\\u0930\\u093f\\u0938\\u094d\\u091a\\u093f\\u092f\\u0928\\u0938\\u0947\\u0928\", \"ru\": \"\\u0414\\u0436\\u0435\\u0439\\u043a \\u041a\\u0440\\u0438\\u0441\\u0442\\u0438\\u0430\\u043d\\u0441\\u0435\\u043d\"}, \"shortNameTranslation\": {\"ar\": \"\\u062c. \\u0643\\u0631\\u064a\\u0633\\u062a\\u064a\\u0627\\u0646\\u0633\\u064a\\u0646\", \"bn\": \"\\u099c\\u09c7. \\u0995\\u09cd\\u09b0\\u09bf\\u09b6\\u09cd\\u099a\\u09bf\\u09af\\u09bc\\u09be\\u09a8\\u09b8\\u09c7\\u09a8\", \"hi\": \"\\u091c\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/lineups",
+      "calledPath": "event/14124239/lineups",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 10923,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 10923,
+        "responseKind": "home/away split (lineups or similar)",
+        "topLevelKeys": [
+          "home",
+          "away"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": [],
+        "sideKeys": {
+          "home": [
+            "teamId",
+            "formation",
+            "confirmed",
+            "manager",
+            "startersListed",
+            "expectedStarters",
+            "sourceConsistent",
+            "dressedPlayers",
+            "players"
+          ],
+          "away": [
+            "teamId",
+            "formation",
+            "confirmed",
+            "manager",
+            "startersListed",
+            "expectedStarters",
+            "sourceConsistent",
+            "dressedPlayers",
+            "players"
+          ]
+        }
+      },
+      "bodyPreview": "{\"home\": {\"teamId\": 24645697, \"formation\": null, \"confirmed\": true, \"manager\": {\"id\": 58284567, \"name\": \"Rick Bowness\"}, \"startersListed\": 20, \"expectedStarters\": null, \"sourceConsistent\": null, \"dressedPlayers\": 20, \"players\": [{\"player\": {\"id\": 25961100, \"name\": \"Jake Christiansen\"}, \"shirtNumber\": 2, \"position\": \"D\", \"positionLabel\": \"Defenceman\", \"substitute\": false, \"battingOrder\": null, \"appearanceSequence\": null, \"appearanceRoles\": [], \"startingPitcher\": null, \"statistics\": {\"rating\": null, \"minutesPlayed\": null}}, {\"player\": {\"id\": 54253772, \"name\": \"Charlie Coyle\"}, \"shirtNumber\": 3, \"position\": \"C\", \"positionLabel\": \"Center\", \"substitute\": false, \"battingOrder\": null, \"appearanceSequence\": null, \"appearanceRoles\": [], \"startingPitcher\": null, \"statistics\": {\"rating\": null, \"minutesPlayed\": null}}, {\"player\": {\"id\": 55421826, \"name\": \"Cole Sillinger\"}, \"shirtNumber\": 4, \"position\": \"C\", \"positionLabel\": \"Center\", \"substitute\": false, \"battingOrder\": null, \"appearanceSequence\": null, \"appearanceRoles\": [], \"startingPitcher\": null, \"statistics\": {\"rating\": null, \"minutesPlayed\": null}}, {\"player\": {\"id\": 74369392, \"name\": \"Denton Mateychuk\"}, \"shirtNumber\": 5, \"position\": \"D\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/player-statistics",
+      "calledPath": "event/14124239/player-statistics",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 11747,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 11747,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "playerStatistics",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore",
+          "coverage"
+        ],
+        "listKey": "playerStatistics",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 22,
+          "totalPages": 5,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "team",
+          "player",
+          "position",
+          "statistics"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"playerStatistics\": [{\"team\": {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"shortName\": \"Maple Leafs\", \"fullName\": null, \"nameCode\": \"TOR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14894, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ffffff\", \"secondary\": \"#002868\", \"text\": \"#002868\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0648\\u0631\\u0648\\u0646\\u062a\\u0648 \\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"bn\": \"\\u09ae\\u09cd\\u09af\\u09be\\u09aa\\u09c7\\u09b2 \\u09b2\\u09bf\\u09ab\\u09b8\", \"hi\": \"\\u092e\\u0947\\u092a\\u0932 \\u0932\\u0940\\u092b\\u094d\\u0938\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"player\": {\"id\": 47474035, \"name\": \"Oliver Ekman-Larsson\", \"firstName\": null, \"lastName\": null, \"short\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/player/{playerId}/statistics",
+      "calledPath": "event/14124239/player/47474035/statistics",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 2004,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 2004,
+        "responseKind": "player object",
+        "topLevelKeys": [
+          "team",
+          "player",
+          "position",
+          "statistics"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "firstName",
+          "lastName",
+          "shortName",
+          "position",
+          "gender",
+          "height",
+          "jerseyNumber",
+          "userCount",
+          "dateOfBirthTimestamp",
+          "marketValueCurrency",
+          "proposedMarketValueRaw",
+          "fieldTranslations",
+          "team"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"team\": {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"shortName\": \"Maple Leafs\", \"fullName\": null, \"nameCode\": \"TOR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14894, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ffffff\", \"secondary\": \"#002868\", \"text\": \"#002868\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0648\\u0631\\u0648\\u0646\\u062a\\u0648 \\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"bn\": \"\\u09ae\\u09cd\\u09af\\u09be\\u09aa\\u09c7\\u09b2 \\u09b2\\u09bf\\u09ab\\u09b8\", \"hi\": \"\\u092e\\u0947\\u092a\\u0932 \\u0932\\u0940\\u092b\\u094d\\u0938\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"player\": {\"id\": 47474035, \"name\": \"Oliver Ekman-Larsson\", \"firstName\": null, \"lastName\": null, \"shortName\": \"O. Ekman-Larss\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/pregame-form",
+      "calledPath": "event/14124239/pregame-form",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 205,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 205,
+        "responseKind": "pregame form envelope",
+        "topLevelKeys": [
+          "homeTeam",
+          "awayTeam"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"homeTeam\": {\"teamId\": 24645697, \"form\": [\"W\", \"L\", \"L\", \"W\", \"L\"], \"value\": 6, \"position\": 16, \"source\": \"provider\"}, \"awayTeam\": {\"teamId\": 58336109, \"form\": [\"W\", \"L\", \"L\", \"W\"], \"value\": 10, \"position\": 9, \"source\": \"provider\"}}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/statistics",
+      "calledPath": "event/14124239/statistics",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 13100,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 13100,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "statistics",
+          "inconsistencies"
+        ],
+        "listKey": "statistics",
+        "listCount": 4,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "period",
+          "groups"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"statistics\": [{\"period\": \"1ST\", \"groups\": [{\"groupName\": \"Match overview\", \"statisticsItems\": [{\"name\": \"Blocked shots\", \"key\": \"Blocked\", \"home\": \"3\", \"away\": \"4\", \"homeValue\": 3, \"awayValue\": 4, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Faceoffs won %\", \"key\": \"FaceOffWinPercentage\", \"home\": \"13/22 (59.1%)\", \"away\": \"9/22 (40.9%)\", \"homeValue\": 13, \"awayValue\": 9, \"homeTotal\": 22, \"awayTotal\": 22, \"homePercentage\": 59.1, \"awayPercentage\": 40.9}, {\"name\": \"Giveaways\", \"key\": \"Giveaways\", \"home\": \"3\", \"away\": \"7\", \"homeValue\": 3, \"awayValue\": 7, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Hits\", \"key\": \"Hits\", \"home\": \"10\", \"away\": \"6\", \"homeValue\": 10, \"awayValue\": 6, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Penalties\", \"key\": \"suspensions\", \"home\": \"3\", \"away\": \"2\", \"homeValue\": 3, \"awayValue\": 2, \"homeTotal\": null, \"awayTotal\": null, \"homePercentage\": null, \"awayPercentage\": null}, {\"name\": \"Penalty minutes\", \"key\": \"SuspensionMinutes\", \"home\": \"8\", \"away\": \"4\", \"homeValue\": 8, \"awayValue\": 4, \"homeTotal\": null, \"aw\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/event/{eventId}/team-streaks",
+      "calledPath": "event/14124239/team-streaks",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 262,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 262,
+        "responseKind": "object (general, generalPerLastX, generalTotal, head2head, head2HeadPerLastX, head2HeadTotal)",
+        "topLevelKeys": [
+          "general",
+          "generalPerLastX",
+          "generalTotal",
+          "head2head",
+          "head2HeadPerLastX",
+          "head2HeadTotal"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"general\": [{\"continued\": false, \"name\": \"First period loser\", \"team\": \"away\", \"value\": \"4/5\"}, {\"continued\": true, \"name\": \"More than 5.5 goals\", \"team\": \"away\", \"value\": \"5/7\"}], \"generalPerLastX\": [], \"generalTotal\": [], \"head2head\": [], \"head2HeadPerLastX\": [], \"head2HeadTotal\": []}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/events",
+      "calledPath": "events",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 2240,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 2240,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 33,
+          "totalPages": 7,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 46983765, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 80588626, \"name\": \"Dallas Stars\"}, \"awayTeam\": {\"id\": 87796464, \"name\": \"Boston Bruins\"}, \"startTimestamp\": 1792540800, \"status\": \"finished\", \"homeScore\": {\"current\": 3, \"display\": 3, \"period1\": 0, \"period2\": 1, \"period3\": 1, \"overtime\": 1, \"normaltime\": 2}, \"awayScore\": {\"current\": 2, \"display\": 2, \"period1\": 1, \"period2\": 1, \"period3\": 0, \"overtime\": 0, \"normaltime\": 2}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 73513513, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 24490165, \"name\": \"St. Louis Blues\"}, \"awayTeam\": {\"id\": 59830519, \"name\": \"Winnipeg Jets\"}, \"startTimestamp\": 1792540800, \"status\": \"finished\", \"homeScore\": {\"current\": 2, \"display\": 2, \"period1\": 1, \"period2\": 0, \"period3\": 1, \"normaltime\": 2}, \"awayScore\": {\"current\": 1, \"display\": 1, \"period1\": 0, \"period2\": 0, \"period3\": 1, \"normaltime\": 1}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 98151763, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 79207669, \"name\": \"Edmonton Oilers\"}, \"awayTeam\": {\"id\": 37460667, \"name\": \"Minnesota Wild\"}, \"startTimestamp\": 1792544400, \"status\": \"finished\", \"homeScore\": {\"current\": 4, \"displ\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/fixtures/today",
+      "calledPath": "fixtures/today",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 2240,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 2240,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 33,
+          "totalPages": 7,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 46983765, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 80588626, \"name\": \"Dallas Stars\"}, \"awayTeam\": {\"id\": 87796464, \"name\": \"Boston Bruins\"}, \"startTimestamp\": 1792540800, \"status\": \"finished\", \"homeScore\": {\"current\": 3, \"display\": 3, \"period1\": 0, \"period2\": 1, \"period3\": 1, \"overtime\": 1, \"normaltime\": 2}, \"awayScore\": {\"current\": 2, \"display\": 2, \"period1\": 1, \"period2\": 1, \"period3\": 0, \"overtime\": 0, \"normaltime\": 2}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 73513513, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 24490165, \"name\": \"St. Louis Blues\"}, \"awayTeam\": {\"id\": 59830519, \"name\": \"Winnipeg Jets\"}, \"startTimestamp\": 1792540800, \"status\": \"finished\", \"homeScore\": {\"current\": 2, \"display\": 2, \"period1\": 1, \"period2\": 0, \"period3\": 1, \"normaltime\": 2}, \"awayScore\": {\"current\": 1, \"display\": 1, \"period1\": 0, \"period2\": 0, \"period3\": 1, \"normaltime\": 1}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 98151763, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 79207669, \"name\": \"Edmonton Oilers\"}, \"awayTeam\": {\"id\": 37460667, \"name\": \"Minnesota Wild\"}, \"startTimestamp\": 1792544400, \"status\": \"finished\", \"homeScore\": {\"current\": 4, \"displ\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/manager/{managerId}",
+      "calledPath": "manager/58284567",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 134,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 134,
+        "responseKind": "manager object",
+        "topLevelKeys": [
+          "manager"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "imageUrl"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"manager\": {\"id\": 58284567, \"name\": \"Rick Bowness\", \"imageUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/managers/58284567\"}}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/player/{playerId}",
+      "calledPath": "player/69552988",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 672,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 672,
+        "responseKind": "player object",
+        "topLevelKeys": [
+          "player"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "firstName",
+          "lastName",
+          "shortName",
+          "position",
+          "gender",
+          "height",
+          "jerseyNumber",
+          "userCount",
+          "dateOfBirthTimestamp",
+          "marketValueCurrency",
+          "proposedMarketValueRaw",
+          "fieldTranslations",
+          "team"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"player\": {\"id\": 69552988, \"name\": \"Connor McDavid\", \"firstName\": \"Connor\", \"lastName\": \"McDavid\", \"shortName\": \"C. McDavid\", \"position\": \"C\", \"gender\": \"M\", \"height\": 188, \"jerseyNumber\": \"97\", \"userCount\": 5991, \"dateOfBirthTimestamp\": 853113600, \"marketValueCurrency\": \"EUR\", \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0648\\u0646\\u0648\\u0631 \\u0645\\u0627\\u0643\\u062f\\u064a\\u0641\\u064a\\u062f\", \"bn\": \"\\u0995\\u09a8\\u09b0 \\u09ae\\u09cd\\u09af\\u09be\\u0995\\u09a1\\u09c7\\u09ad\\u09bf\\u09a1\", \"hi\": \"\\u0915\\u0949\\u0928\\u0930 \\u092e\\u0948\\u0915\\u0921\\u0947\\u0935\\u093f\\u0921\", \"ru\": \"\\u041a\\u043e\\u043d\\u043d\\u043e\\u0440 \\u041c\\u0430\\u043a\\u0434\\u044d\\u0432\\u0438\\u0434\"}, \"shortNameTranslation\": {\"ar\": \"\\u0643. \\u0645\\u0627\\u0643\\u062f\\u064a\\u0641\\u064a\\u062f\", \"bn\": \"\\u09b8\\u09bf. \\u09ae\\u09cd\\u09af\\u09be\\u0995\\u09a1\\u09c7\\u09ad\\u09bf\\u09a1\", \"hi\": \"\\u0938\\u0940. \\u092e\\u0948\\u0915\\u0921\\u0947\\u0935\\u093f\\u0921\", \"ru\": \"\\u041a. \\u041c\\u0430\\u043a\\u0434\\u044d\\u0432\\u0438\\u0434\"}}, \"team\": null}}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/player/{playerId}/events/{direction}",
+      "calledPath": "player/69552988/events/last",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 18485,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 18485,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 961,
+          "totalPages": 193,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 98151763, \"homeTeam\": {\"id\": 79207669, \"name\": \"Edmonton Oilers\", \"shortName\": \"Oilers\", \"fullName\": null, \"nameCode\": \"EDM\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14259, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ff4c00\", \"secondary\": \"#041e41\", \"text\": \"#041e41\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0625\\u062f\\u0645\\u0648\\u0646\\u062a\\u0648\\u0646 \\u0623\\u0648\\u064a\\u0644\\u0631\\u0632\", \"ru\": \"\\u042d\\u0434\\u043c\\u043e\\u043d\\u0442\\u043e\\u043d \\u041e\\u0439\\u043b\\u0435\\u0440\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u0623\\u0648\\u064a\\u0644\\u0631\\u0632\", \"bn\": \"\\u0985\\u09af\\u09bc\\u09c7\\u09b2\\u09be\\u09b0\\u09cd\\u09b8\", \"hi\": \"\\u0911\\u092f\\u0932\\u0930\\u094d\\u0938\", \"ru\": \"\\u042d\\u0434\\u043c\\u043e\\u043d\\u0442\\u043e\\u043d \\u041e\\u0439\\u043b\\u0435\\u0440\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 37460667, \"name\": \"Minnesota Wild\", \"shortName\": \"Wild\", \"fullName\": null, \"nameCode\": \"MIN\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"u\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/player/{playerId}/unique-tournament/{tournamentId}/season/{seasonId}/statistics",
+      "calledPath": "player/69552988/unique-tournament/40307999/season/12009093/statistics",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 904,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 904,
+        "responseKind": "statistics object",
+        "topLevelKeys": [
+          "player",
+          "team",
+          "statistics",
+          "inconsistencies",
+          "playerId",
+          "teamId",
+          "uniqueTournamentId",
+          "seasonId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "appearances",
+          "assists",
+          "averageEvenTimeOnIce",
+          "averagePowerPlayTimeOnIce",
+          "averageShifts",
+          "averageShortHandedTimeOnIce",
+          "averageTimeOnIce",
+          "blocked",
+          "evenStrengthAssists",
+          "evenStrengthGoals",
+          "evenStrengthPoints",
+          "evenTimeOnIce",
+          "faceOffPercentage",
+          "faceOffTaken",
+          "faceOffWins",
+          "gameWinningGoals",
+          "gamesStarted",
+          "goals",
+          "hits",
+          "overTimeGoals",
+          "penaltyMinutes",
+          "plusMinus",
+          "points",
+          "powerPlayAssists",
+          "powerPlayGoals",
+          "powerPlayPoints",
+          "powerPlayTimeOnIce",
+          "shifts",
+          "shortHandedAssists",
+          "shortHandedGoals",
+          "shortHandedPoints",
+          "shortHandedShots",
+          "shortHandedTimeOnIce",
+          "shotPercentage",
+          "shots"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"player\": null, \"team\": null, \"statistics\": {\"appearances\": 9, \"assists\": 20, \"averageEvenTimeOnIce\": 1099, \"averagePowerPlayTimeOnIce\": 217, \"averageShifts\": 27.33, \"averageShortHandedTimeOnIce\": 102, \"averageTimeOnIce\": 1418, \"blocked\": 5, \"evenStrengthAssists\": 12, \"evenStrengthGoals\": 5, \"evenStrengthPoints\": 17, \"evenTimeOnIce\": 9888, \"faceOffPercentage\": 50.4, \"faceOffTaken\": 113, \"faceOffWins\": 57, \"gameWinningGoals\": 0, \"gamesStarted\": 8, \"goals\": 6, \"hits\": 13, \"overTimeGoals\": 0, \"penaltyMinutes\": 2, \"plusMinus\": 17, \"points\": 26, \"powerPlayAssists\": 8, \"powerPlayGoals\": 0, \"powerPlayPoints\": 8, \"powerPlayTimeOnIce\": 1954, \"shifts\": 246, \"shortHandedAssists\": 0, \"shortHandedGoals\": 1, \"shortHandedPoints\": 1, \"shortHandedShots\": 1, \"shortHandedTimeOnIce\": 916, \"shotPercentage\": 27.3, \"shots\": 22, \"takeaways\": 4, \"timeOnIce\": 12758, \"type\": \"regularSeason\"}, \"inconsistencies\": [], \"playerId\": 69552988, \"teamId\": null, \"uniqueTournamentId\": 40307999, \"seasonId\": 12009093}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/players",
+      "calledPath": "players",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 455,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 455,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 15177,
+          "totalPages": 3036,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "countryAlpha2",
+          "position"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 36979316, \"name\": \"Alex Ovechkin\", \"countryAlpha2\": \"RU\", \"position\": \"L\"}, {\"id\": 69552988, \"name\": \"Connor McDavid\", \"countryAlpha2\": \"CA\", \"position\": \"C\"}, {\"id\": 76950836, \"name\": \"Leon Draisaitl\", \"countryAlpha2\": \"DE\", \"position\": \"C\"}, {\"id\": 94770949, \"name\": \"Sidney Crosby\", \"countryAlpha2\": \"CA\", \"position\": \"C\"}, {\"id\": 35923227, \"name\": \"David Pastrnak\", \"countryAlpha2\": \"CZ\", \"position\": \"R\"}], \"page\": 1, \"limit\": 5, \"total\": 15177, \"totalPages\": 3036, \"hasMore\": true}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/search",
+      "calledPath": "search",
+      "query": {
+        "page": 1,
+        "limit": 5,
+        "q": "Maple Leafs"
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 164,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 164,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 1,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 1,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "id",
+          "name",
+          "countryAlpha2",
+          "gender"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"type\": \"team\", \"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"countryAlpha2\": \"CA\", \"gender\": \"M\"}], \"page\": 1, \"limit\": 5, \"total\": 1, \"totalPages\": 1, \"hasMore\": false}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}",
+      "calledPath": "team/58336109",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 842,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 842,
+        "responseKind": "team object",
+        "topLevelKeys": [
+          "team"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "shortName",
+          "fullName",
+          "nameCode",
+          "type",
+          "gender",
+          "national",
+          "disabled",
+          "userCount",
+          "sport",
+          "country",
+          "teamColors",
+          "fieldTranslations",
+          "venue",
+          "category",
+          "tournament",
+          "primaryUniqueTournament",
+          "foundationDateTimestamp",
+          "logoUrl",
+          "manager"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"team\": {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"shortName\": \"Maple Leafs\", \"fullName\": null, \"nameCode\": \"TOR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14911, \"sport\": {\"name\": \"Hockey\"}, \"country\": {\"name\": \"Canada\", \"alpha2\": \"CA\", \"alpha3\": \"CAN\"}, \"teamColors\": {\"primary\": \"#ffffff\", \"secondary\": \"#002868\", \"text\": \"#002868\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0648\\u0631\\u0648\\u0646\\u062a\\u0648 \\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"bn\": \"\\u09ae\\u09cd\\u09af\\u09be\\u09aa\\u09c7\\u09b2 \\u09b2\\u09bf\\u09ab\\u09b8\", \"hi\": \"\\u092e\\u0947\\u092a\\u0932 \\u0932\\u0940\\u092b\\u094d\\u0938\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/teams/58336109\", \"manager\": null}}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/enrichments",
+      "calledPath": "team/58336109/enrichments",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 1231,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1231,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "types"
+        ],
+        "listKey": "types",
+        "listCount": 9,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "useCase"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"types\": [{\"type\": \"events_last\", \"useCase\": \"Recent finished matches in our event-list envelope. Prefer GET .../team/:id/events/last for the same data from the events table.\"}, {\"type\": \"events_next\", \"useCase\": \"Upcoming matches in our event-list envelope. Prefer GET .../team/:id/events/next for the same data from the events table.\"}, {\"type\": \"featured_event\", \"useCase\": \"Highlighted featured match. Dedicated route: GET .../team/:id/featured-event.\"}, {\"type\": \"media\", \"useCase\": \"Team media / image gallery. Dedicated route: GET .../team/:id/media.\"}, {\"type\": \"near_events\", \"useCase\": \"Immediate previous and next match. Dedicated route: GET .../team/:id/near-events.\"}, {\"type\": \"performance\", \"useCase\": \"Recent form with per-match performance points. Dedicated route: GET .../team/:id/performance.\"}, {\"type\": \"standings_seasons\", \"useCase\": \"Tournaments and seasons this team has standings in. Dedicated route: GET .../team/:id/standings-seasons.\"}, {\"type\": \"team_statistics_seasons\", \"useCase\": \"Seasons that have team-aggregate statistics. Fetch via GET .../enrichments/team_statistics_seasons.\"}, {\"type\": \"unique_tournaments_all\", \"useCase\": \"Unique tournaments this team has app\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/enrichments/{type}",
+      "calledPath": "team/58336109/enrichments/events_last",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 40181,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 40181,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 10,
+        "pagination": {
+          "page": 1,
+          "limit": 10,
+          "total": 30,
+          "totalPages": 3,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 11477870, \"homeTeam\": {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"shortName\": \"Maple Leafs\", \"fullName\": null, \"nameCode\": \"TOR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14945, \"sport\": {\"name\": \"Hockey\"}, \"country\": {\"name\": \"Canada\", \"alpha2\": \"CA\", \"alpha3\": \"CAN\"}, \"teamColors\": {\"primary\": \"#ffffff\", \"secondary\": \"#002868\", \"text\": \"#002868\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0648\\u0631\\u0648\\u0646\\u062a\\u0648 \\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"bn\": \"\\u09ae\\u09cd\\u09af\\u09be\\u09aa\\u09c7\\u09b2 \\u09b2\\u09bf\\u09ab\\u09b8\", \"hi\": \"\\u092e\\u0947\\u092a\\u0932 \\u0932\\u0940\\u092b\\u094d\\u0938\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 58471449, \"name\": \"Anaheim\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/events/{direction}",
+      "calledPath": "team/58336109/events/last",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 18917,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 18917,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 1106,
+          "totalPages": 222,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 14124239, \"homeTeam\": {\"id\": 24645697, \"name\": \"Columbus Blue Jackets\", \"shortName\": \"Blue Jackets\", \"fullName\": null, \"nameCode\": \"CBJ\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 5207, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ce1126\", \"secondary\": \"#002654\", \"text\": \"#002654\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0648\\u0644\\u0648\\u0645\\u0628\\u0648\\u0633 \\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"bn\": \"\\u09ac\\u09cd\\u09b2\\u09c1 \\u099c\\u09cd\\u09af\\u09be\\u0995\\u09c7\\u099f\", \"hi\": \"\\u092c\\u094d\\u0932\\u0942 \\u091c\\u0948\\u0915\\u0947\\u091f\\u094d\\u0938\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 58336109, \"name\":\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/featured-event",
+      "calledPath": "team/58336109/featured-event",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 3908,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 3908,
+        "responseKind": "match object",
+        "topLevelKeys": [
+          "event"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType",
+          "hasEventPlayerHeatMap",
+          "hasEventPlayerStatistics",
+          "isAwarded",
+          "isEditor",
+          "periods"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"event\": {\"id\": 92441270, \"homeTeam\": {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"shortName\": \"Maple Leafs\", \"fullName\": null, \"nameCode\": \"TOR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14945, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ffffff\", \"secondary\": \"#002868\", \"text\": \"#002868\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0648\\u0631\\u0648\\u0646\\u062a\\u0648 \\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"bn\": \"\\u09ae\\u09cd\\u09af\\u09be\\u09aa\\u09c7\\u09b2 \\u09b2\\u09bf\\u09ab\\u09b8\", \"hi\": \"\\u092e\\u0947\\u092a\\u0932 \\u0932\\u0940\\u092b\\u094d\\u0938\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 49107440, \"name\": \"New York Islanders\", \"shortName\": \"Islanders\", \"fullName\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/media",
+      "calledPath": "team/58336109/media",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 1914,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1914,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "media",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "media",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 10,
+          "totalPages": 2,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "title",
+          "subtitle",
+          "url",
+          "sourceUrl",
+          "thumbnailUrl",
+          "mediaType",
+          "doFollow",
+          "livestream",
+          "keyHighlight",
+          "createdAtTimestamp",
+          "forCountries"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"media\": [{\"title\": \"Sabres 5 - 4 Maple Leafs\", \"subtitle\": \"Full Highlights\", \"url\": \"https://www.youtube.com/watch?v=62vGimP9R38\", \"sourceUrl\": \"https://www.youtube.com/watch?v=62vGimP9R38\", \"thumbnailUrl\": \"https://i.ytimg.com/vi/62vGimP9R38/hqdefault.jpg\", \"mediaType\": 6, \"doFollow\": false, \"livestream\": false, \"keyHighlight\": true, \"createdAtTimestamp\": 1792118696, \"forCountries\": null}, {\"title\": \"Maple Leafs 4 - 5 Mammoth\", \"subtitle\": \"Full Highlights\", \"url\": \"https://www.youtube.com/watch?v=7m_vQ_H-nqE\", \"sourceUrl\": \"https://www.youtube.com/watch?v=7m_vQ_H-nqE\", \"thumbnailUrl\": \"https://i.ytimg.com/vi/7m_vQ_H-nqE/hqdefault.jpg\", \"mediaType\": 6, \"doFollow\": false, \"livestream\": false, \"keyHighlight\": true, \"createdAtTimestamp\": 1791950793, \"forCountries\": null}, {\"title\": \"Maple Leafs 6 - 3 Avalanche\", \"subtitle\": \"Full Highlights\", \"url\": \"https://www.youtube.com/watch?v=RdBsTA9oHmI\", \"sourceUrl\": \"https://www.youtube.com/watch?v=RdBsTA9oHmI\", \"thumbnailUrl\": \"https://i.ytimg.com/vi/RdBsTA9oHmI/hqdefault.jpg\", \"mediaType\": 6, \"doFollow\": false, \"livestream\": false, \"keyHighlight\": true, \"createdAtTimestamp\": 1791687270, \"forCountries\": null}, {\"title\": \"Golden Knights 3\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/near-events",
+      "calledPath": "team/58336109/near-events",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 7811,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 7811,
+        "responseKind": "previous/next event envelope",
+        "topLevelKeys": [
+          "previousEvent",
+          "nextEvent",
+          "sourceUpdatedAt"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"previousEvent\": {\"id\": 14124239, \"homeTeam\": {\"id\": 24645697, \"name\": \"Columbus Blue Jackets\", \"shortName\": \"Blue Jackets\", \"fullName\": null, \"nameCode\": \"CBJ\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 5207, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ce1126\", \"secondary\": \"#002654\", \"text\": \"#002654\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0648\\u0644\\u0648\\u0645\\u0628\\u0648\\u0633 \\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"bn\": \"\\u09ac\\u09cd\\u09b2\\u09c1 \\u099c\\u09cd\\u09af\\u09be\\u0995\\u09c7\\u099f\", \"hi\": \"\\u092c\\u094d\\u0932\\u0942 \\u091c\\u0948\\u0915\\u0947\\u091f\\u094d\\u0938\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 58336109, \"\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/performance",
+      "calledPath": "team/58336109/performance",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 22702,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 22702,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "order",
+          "sampleSize",
+          "form",
+          "events",
+          "points",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 20,
+          "totalPages": 4,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "format",
+          "homeScore",
+          "awayScore",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials",
+          "aggregatedWinnerCode",
+          "changes",
+          "crowdsourcingDataDisplayEnabled",
+          "crowdsourcingEnabled",
+          "eventFilters",
+          "eventState",
+          "feedLocked",
+          "firstToServe",
+          "groundType"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"order\": \"startTimestamp:desc\", \"sampleSize\": 20, \"form\": [{\"eventId\": 14124239, \"venue\": \"away\", \"outcome\": \"W\", \"opponent\": {\"id\": 24645697, \"name\": \"Columbus Blue Jackets\", \"shortName\": \"Blue Jackets\", \"fullName\": null, \"nameCode\": \"CBJ\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 5207, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#ce1126\", \"secondary\": \"#002654\", \"text\": \"#002654\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0648\\u0644\\u0648\\u0645\\u0628\\u0648\\u0633 \\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0628\\u0644\\u0648 \\u062c\\u0627\\u0643\\u064a\\u062a\\u0633\", \"bn\": \"\\u09ac\\u09cd\\u09b2\\u09c1 \\u099c\\u09cd\\u09af\\u09be\\u0995\\u09c7\\u099f\", \"hi\": \"\\u092c\\u094d\\u0932\\u0942 \\u091c\\u0948\\u0915\\u0947\\u091f\\u094d\\u0938\", \"ru\": \"\\u041a\\u043e\\u043b\\u0430\\u043c\\u0431\\u0443\\u0441 \\u0411\\u043b\\u044e \\u0414\\u0436\\u0435\\u043a\\u0435\\u0442\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTim\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/players",
+      "calledPath": "team/58336109/players",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 175397,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 175397,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "players"
+        ],
+        "listKey": "players",
+        "listCount": 53,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "player",
+          "position"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"players\": [{\"player\": {\"id\": 47474035, \"name\": \"Oliver Ekman-Larsson\", \"firstName\": null, \"lastName\": null, \"shortName\": \"O. Ekman-Larsson\", \"position\": \"D\", \"gender\": \"M\", \"height\": 188, \"jerseyNumber\": \"95\", \"userCount\": 113, \"dateOfBirthTimestamp\": 679708800, \"marketValueCurrency\": null, \"proposedMarketValueRaw\": null, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0625\\u064a\\u0643\\u0645\\u0627\\u0646 \\u0644\\u0627\\u0631\\u0633\\u0648\\u0646\\u060c \\u0623\\u0648\\u0644\\u064a\\u0641\\u0631\", \"bn\": \"\\u098f\\u0995\\u09ae\\u09cd\\u09af\\u09be\\u09a8-\\u09b2\\u09be\\u09b0\\u09b8\\u09a8, \\u0985\\u09b2\\u09bf\\u09ad\\u09be\\u09b0\", \"hi\": \"\\u090f\\u0915\\u092e\\u0948\\u0928-\\u0932\\u093e\\u0930\\u094d\\u0938\\u0928, \\u0913\\u0932\\u093f\\u0935\\u0930\", \"ru\": \"\\u042d\\u043a\\u043c\\u0430\\u043d-\\u041b\\u0430\\u0440\\u0441\\u0441\\u043e\\u043d \\u041e\\u043b\\u0438\\u0432\\u0435\\u0440\"}, \"shortNameTranslation\": {\"ar\": \"\\u0623. \\u0625\\u064a\\u0643\\u0645\\u0627\\u0646 \\u0644\\u0627\\u0631\\u0633\\u0648\\u0646\", \"bn\": \"\\u0993. \\u098f\\u0995\\u09ae\\u09cd\\u09af\\u09be\\u09a8-\\u09b2\\u09be\\u09b0\\u09b8\\u09a8\", \"hi\": \"\\u0913. \\u090f\\u0915\\u092e\\u0948\\u0928-\\u0932\\u093e\\u0930\\u094d\\u0938\\u0928\", \"ru\": \"\\u042d. \\u041e\\u043b\\u0438\\u0432\\u0435\\u0440\"}}, \"team\":\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/rankings",
+      "calledPath": "team/58336109/rankings",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 404,
+      "bytes": 343,
+      "error": "Enrichment \"rankings\" for ice hockey team 58336109 was not found.",
+      "classification": {
+        "http": 404,
+        "bytes": 343,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 404,
+          "message": "Enrichment \"rankings\" for ice hockey team 58336109 was not found.",
+          "error": "NotFound",
+          "details": {
+            "code": "ENRICHMENT_NOT_FOUND",
+            "reason": "no_data_recorded"
+          }
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 404, \"message\": \"Enrichment \\\"rankings\\\" for ice hockey team 58336109 was not found.\", \"error\": \"NotFound\", \"details\": {\"code\": \"ENRICHMENT_NOT_FOUND\", \"reason\": \"no_data_recorded\"}, \"path\": \"/api/v1/ice_hockey/team/58336109/rankings?page=1&limit=5\", \"timestamp\": \"2026-10-21T15:49:24.016Z\", \"requestId\": \"00ae714d-63fd-4b68-bc98-66826f55fd41\"}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/standings-seasons",
+      "calledPath": "team/58336109/standings-seasons",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 5540,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 5540,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "uniqueTournamentSeasons",
+          "tournamentSeasons",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "uniqueTournamentSeasons",
+        "listCount": 1,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 1,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "uniqueTournament",
+          "seasons"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"uniqueTournamentSeasons\": [{\"uniqueTournament\": {\"id\": 40307999, \"name\": \"NHL\", \"userCount\": 18190, \"primaryColorHex\": null, \"secondaryColorHex\": \"#808291\", \"category\": {\"name\": \"North America\", \"flag\": \"north-america\", \"alpha2\": null, \"country\": null, \"sport\": {\"name\": \"Hockey\"}, \"priority\": 11, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0627\\u0644\\u0634\\u0645\\u0627\\u0644\\u064a\\u0629\", \"ru\": \"\\u0421\\u0435\\u0432\\u0435\\u0440\\u043d\\u0430\\u044f \\u0410\\u043c\\u0435\\u0440\\u0438\\u043a\\u0430\"}}}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0648\\u0631\\u064a \\u0627\\u0644\\u0647\\u0648\\u0643\\u064a \\u0627\\u0644\\u0648\\u0637\\u0646\\u064a\", \"bn\": \"\\u098f\\u09a8\\u098f\\u0987\\u099a\\u098f\\u09b2\", \"hi\": \"\\u090f\\u0928\\u090f\\u091a\\u090f\\u0932\", \"ru\": \"\\u041d\\u0425\\u041b\"}}, \"hasPerformanceGraphFeature\": false, \"hasEventPlayerStatistics\": false, \"displayInverseHomeAwayTeams\": true, \"tennisPoints\": null}, \"seasons\": [{\"id\": 12009093, \"name\": \"NHL 26/27\", \"year\": \"26/27\", \"editor\": false, \"seasonCoverageInfo\": null}, {\"id\": 98013858, \"name\": \"NHL 25/26\", \"year\": \"25/26\", \"editor\": false, \"seasonCoverageInfo\": null}, {\"id\": 44287773, \"name\": \"NHL 24/25\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/team/{teamId}/unique-tournaments",
+      "calledPath": "team/58336109/unique-tournaments",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 1448,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 1448,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "uniqueTournaments",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "uniqueTournaments",
+        "listCount": 2,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 2,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "userCount",
+          "primaryColorHex",
+          "secondaryColorHex",
+          "category",
+          "fieldTranslations",
+          "hasPerformanceGraphFeature",
+          "hasEventPlayerStatistics",
+          "displayInverseHomeAwayTeams",
+          "tennisPoints"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"uniqueTournaments\": [{\"id\": 40307999, \"name\": \"NHL\", \"userCount\": 18190, \"primaryColorHex\": null, \"secondaryColorHex\": \"#808291\", \"category\": {\"name\": \"North America\", \"flag\": \"north-america\", \"alpha2\": null, \"country\": null, \"sport\": {\"name\": \"Hockey\"}, \"priority\": 11, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0627\\u0644\\u0634\\u0645\\u0627\\u0644\\u064a\\u0629\", \"ru\": \"\\u0421\\u0435\\u0432\\u0435\\u0440\\u043d\\u0430\\u044f \\u0410\\u043c\\u0435\\u0440\\u0438\\u043a\\u0430\"}}}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0648\\u0631\\u064a \\u0627\\u0644\\u0647\\u0648\\u0643\\u064a \\u0627\\u0644\\u0648\\u0637\\u0646\\u064a\", \"bn\": \"\\u098f\\u09a8\\u098f\\u0987\\u099a\\u098f\\u09b2\", \"hi\": \"\\u090f\\u0928\\u090f\\u091a\\u090f\\u0932\", \"ru\": \"\\u041d\\u0425\\u041b\"}}, \"hasPerformanceGraphFeature\": null, \"hasEventPlayerStatistics\": null, \"displayInverseHomeAwayTeams\": true, \"tennisPoints\": null}, {\"id\": 34537126, \"name\": \"NHL Preseason\", \"userCount\": 2259, \"primaryColorHex\": \"#020202\", \"secondaryColorHex\": \"#808190\", \"category\": {\"name\": \"North America\", \"flag\": \"north-america\", \"alpha2\": null, \"country\": null, \"sport\": {\"name\": \"Hockey\"}, \"priority\": 11, \"fieldTranslat\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/teams",
+      "calledPath": "teams",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 384,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 384,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 532,
+          "totalPages": 107,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "countryAlpha2"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 67204796, \"name\": \"Montr\\u00e9al Canadiens\", \"countryAlpha2\": \"CA\"}, {\"id\": 15044426, \"name\": \"Sweden\", \"countryAlpha2\": null}, {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"countryAlpha2\": \"CA\"}, {\"id\": 98901434, \"name\": \"Colorado Avalanche\", \"countryAlpha2\": null}, {\"id\": 87796464, \"name\": \"Boston Bruins\", \"countryAlpha2\": \"US\"}], \"page\": 1, \"limit\": 5, \"total\": 532, \"totalPages\": 107, \"hasMore\": true}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/tournaments",
+      "calledPath": "tournaments",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 929,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 929,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 115,
+          "totalPages": 23,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "categoryName",
+          "countryAlpha2",
+          "logoUrl"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 40307999, \"name\": \"NHL\", \"categoryName\": \"North America\", \"countryAlpha2\": null, \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/40307999\"}, {\"id\": 83453794, \"name\": \"IIHF World Championship\", \"categoryName\": \"International\", \"countryAlpha2\": null, \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/83453794\"}, {\"id\": 41580242, \"name\": \"Olympic Games\", \"categoryName\": \"International\", \"countryAlpha2\": null, \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/41580242\"}, {\"id\": 32046138, \"name\": \"KHL\", \"categoryName\": \"Russia\", \"countryAlpha2\": \"RU\", \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/32046138\"}, {\"id\": 75786592, \"name\": \"SHL\", \"categoryName\": \"Sweden\", \"countryAlpha2\": \"SE\", \"logoUrl\": \"https://sports-api.sportsdata365.com/msdata/v1/images/tournaments/75786592\"}], \"page\": 1, \"limit\": 5, \"total\": 115, \"totalPages\": 23, \"hasMore\": true}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/unique-tournament/{tournamentId}",
+      "calledPath": "unique-tournament/40307999",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 642,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 642,
+        "responseKind": "competition object",
+        "topLevelKeys": [
+          "uniqueTournament"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": [
+          "id",
+          "name",
+          "userCount",
+          "primaryColorHex",
+          "secondaryColorHex",
+          "category",
+          "fieldTranslations",
+          "hasPerformanceGraphFeature",
+          "hasEventPlayerStatistics",
+          "displayInverseHomeAwayTeams",
+          "tennisPoints"
+        ],
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"uniqueTournament\": {\"id\": 40307999, \"name\": \"NHL\", \"userCount\": 18124, \"primaryColorHex\": null, \"secondaryColorHex\": \"#808291\", \"category\": {\"name\": \"North America\", \"flag\": \"north-america\", \"alpha2\": null, \"country\": null, \"sport\": {\"name\": \"Hockey\"}, \"priority\": 11, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0627\\u0644\\u0634\\u0645\\u0627\\u0644\\u064a\\u0629\", \"ru\": \"\\u0421\\u0435\\u0432\\u0435\\u0440\\u043d\\u0430\\u044f \\u0410\\u043c\\u0435\\u0440\\u0438\\u043a\\u0430\"}}}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0648\\u0631\\u064a \\u0627\\u0644\\u0647\\u0648\\u0643\\u064a \\u0627\\u0644\\u0648\\u0637\\u0646\\u064a\", \"bn\": \"\\u098f\\u09a8\\u098f\\u0987\\u099a\\u098f\\u09b2\", \"hi\": \"\\u090f\\u0928\\u090f\\u091a\\u090f\\u0932\", \"ru\": \"\\u041d\\u0425\\u041b\"}}, \"hasPerformanceGraphFeature\": false, \"hasEventPlayerStatistics\": false, \"displayInverseHomeAwayTeams\": true, \"tennisPoints\": null}}"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/unique-tournament/{tournamentId}/events",
+      "calledPath": "unique-tournament/40307999/events",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 17072,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 17072,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 16141,
+          "totalPages": 3229,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 53302382, \"homeTeam\": {\"id\": 33836608, \"name\": \"Carolina Hurricanes\", \"shortName\": \"Hurricanes\", \"fullName\": null, \"nameCode\": \"CAR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 15103, \"sport\": {\"name\": \"Ice hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#cc0000\", \"secondary\": \"#ffffff\", \"text\": \"#ffffff\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0627\\u0631\\u0648\\u0644\\u064a\\u0646\\u0627 \\u0647\\u0648\\u0631\\u064a\\u0643\\u0627\\u0646\\u0632\", \"ru\": \"\\u041a\\u0430\\u0440\\u043e\\u043b\\u0438\\u043d\\u0430 \\u0425\\u0430\\u0440\\u0440\\u0438\\u043a\\u0435\\u0439\\u043d\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u0647\\u0648\\u0631\\u064a\\u0643\\u0627\\u0646\\u0632\", \"bn\": \"\\u09b9\\u09be\\u09b0\\u09bf\\u0995\\u09c7\\u09a8\\u09b8\", \"hi\": \"\\u0939\\u0930\\u093f\\u0915\\u0947\\u0902\\u0938\", \"ru\": \"\\u041a\\u0430\\u0440\\u043e\\u043b\\u0438\\u043d\\u0430 \\u0425\\u0430\\u0440\\u0440\\u0438\\u043a\\u0435\\u0439\\u043d\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 65768659, \"name\": \"New York Rangers\", \"shortName\": \"Rangers\", \"fullName\": nu\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/unique-tournament/{tournamentId}/scheduled-events/{date}",
+      "calledPath": "unique-tournament/40307999/scheduled-events/2026-10-21",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 18538,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 18538,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 8,
+          "totalPages": 2,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 46983765, \"homeTeam\": {\"id\": 80588626, \"name\": \"Dallas Stars\", \"shortName\": \"Stars\", \"fullName\": null, \"nameCode\": \"DAL\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 9111, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#006847\", \"secondary\": \"#111111\", \"text\": \"#111111\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062f\\u0627\\u0644\\u0627\\u0633 \\u0633\\u062a\\u0627\\u0631\\u0632\", \"ru\": \"\\u0414\\u0430\\u043b\\u043b\\u0430\\u0441 \\u0421\\u0442\\u0430\\u0440\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u0633\\u062a\\u0627\\u0631\\u0632\", \"bn\": \"\\u09b8\\u09cd\\u099f\\u09be\\u09b0\\u09b8\", \"hi\": \"\\u0938\\u094d\\u091f\\u093e\\u0930\\u094d\\u0938\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 87796464, \"name\": \"Boston Bruins\", \"shortName\": \"Bruins\", \"fullName\": null, \"nameCode\": \"BOS\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14423, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#111111\", \"secondary\": \"#fcb514\", \"text\": \"#fcb514\"}, \"fieldTranslat\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/unique-tournament/{tournamentId}/season/{seasonId}/round/{round}",
+      "calledPath": "unique-tournament/40307999/season/12009093/round/1",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 18558,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 18558,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 202,
+          "totalPages": 41,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 31664876, \"homeTeam\": {\"id\": 33836608, \"name\": \"Carolina Hurricanes\", \"shortName\": \"Hurricanes\", \"fullName\": null, \"nameCode\": \"CAR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 12414, \"sport\": {\"name\": \"Hockey\"}, \"country\": null, \"teamColors\": {\"primary\": \"#cc0000\", \"secondary\": \"#ffffff\", \"text\": \"#ffffff\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u0643\\u0627\\u0631\\u0648\\u0644\\u064a\\u0646\\u0627 \\u0647\\u0648\\u0631\\u064a\\u0643\\u0627\\u0646\\u0632\", \"ru\": \"\\u041a\\u0430\\u0440\\u043e\\u043b\\u0438\\u043d\\u0430 \\u0425\\u0430\\u0440\\u0440\\u0438\\u043a\\u0435\\u0439\\u043d\\u0437\"}, \"shortNameTranslation\": {\"ar\": \"\\u0647\\u0648\\u0631\\u064a\\u0643\\u0627\\u0646\\u0632\", \"bn\": \"\\u09b9\\u09be\\u09b0\\u09bf\\u0995\\u09c7\\u09a8\\u09b8\", \"hi\": \"\\u0939\\u0930\\u093f\\u0915\\u0947\\u0902\\u0938\", \"ru\": \"\\u041a\\u0430\\u0440\\u043e\\u043b\\u0438\\u043d\\u0430 \\u0425\\u0430\\u0440\\u0440\\u0438\\u043a\\u0435\\u0439\\u043d\\u0437\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 73775881, \"name\": \"Florida Panthers\", \"shortName\": \"Panthers\", \"fullName\": null,\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/unique-tournament/{tournamentId}/season/{seasonId}/standings/{type}",
+      "calledPath": "unique-tournament/40307999/season/12009093/standings/total",
+      "query": null,
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 39563,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 39563,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "standings"
+        ],
+        "listKey": "standings",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "descriptions",
+          "rows"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"standings\": [{\"type\": \"total\", \"descriptions\": [], \"rows\": [{\"team\": {\"id\": 87796464, \"name\": \"Boston Bruins\"}, \"position\": 1, \"matches\": 10, \"wins\": 7, \"draws\": 0, \"losses\": 3, \"scoresFor\": 36, \"scoresAgainst\": 22, \"points\": 15, \"scoreDiffFormatted\": \"+14\", \"promotion\": null, \"netRunRate\": null, \"noResults\": null, \"oversFor\": null, \"oversAgainst\": null, \"group\": \"Atlantic Division\", \"gamesBehind\": null, \"winPercentage\": null, \"overtimeWins\": null, \"overtimeLosses\": 1, \"penaltyWins\": null, \"penaltyLosses\": null}, {\"team\": {\"id\": 47435914, \"name\": \"Utah Mammoth\"}, \"position\": 1, \"matches\": 10, \"wins\": 7, \"draws\": 0, \"losses\": 3, \"scoresFor\": 38, \"scoresAgainst\": 31, \"points\": 14, \"scoreDiffFormatted\": \"+7\", \"promotion\": null, \"netRunRate\": null, \"noResults\": null, \"oversFor\": null, \"oversAgainst\": null, \"group\": \"Central Division\", \"gamesBehind\": null, \"winPercentage\": null, \"overtimeWins\": null, \"overtimeLosses\": 0, \"penaltyWins\": null, \"penaltyLosses\": null}, {\"team\": {\"id\": 12760890, \"name\": \"Vegas Golden Knights\"}, \"position\": 1, \"matches\": 11, \"wins\": 8, \"draws\": 0, \"losses\": 3, \"scoresFor\": 44, \"scoresAgainst\": 30, \"points\": 16, \"scoreDiffFormatted\": \"+14\", \"promotion\": null\u2026"
+    },
+    {
+      "routeTemplate": "/v1/ice_hockey/unique-tournament/{tournamentId}/seasons",
+      "calledPath": "unique-tournament/40307999/seasons",
+      "query": {
+        "page": 1,
+        "limit": 5
+      },
+      "idsUsed": {
+        "eventId": 14124239,
+        "teamId": 58336109,
+        "playerId": 69552988,
+        "tournamentId": 40307999,
+        "seasonId": 12009093,
+        "managerId": 58284567,
+        "date": "2026-10-21",
+        "round": "1"
+      },
+      "http": 200,
+      "bytes": 425,
+      "error": null,
+      "classification": {
+        "http": 200,
+        "bytes": 425,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "seasons",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore",
+          "currentSeasonId"
+        ],
+        "listKey": "seasons",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 20,
+          "totalPages": 4,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "name",
+          "year",
+          "editor"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"seasons\": [{\"id\": 12009093, \"name\": \"NHL 26/27\", \"year\": \"26/27\", \"editor\": false}, {\"id\": 98013858, \"name\": \"NHL 25/26\", \"year\": \"25/26\", \"editor\": false}, {\"id\": 44287773, \"name\": \"NHL 24/25\", \"year\": \"24/25\", \"editor\": false}, {\"id\": 40639063, \"name\": \"NHL 23/24\", \"year\": \"23/24\", \"editor\": false}, {\"id\": 88623058, \"name\": \"NHL 22/23\", \"year\": \"22/23\", \"editor\": false}], \"page\": 1, \"limit\": 5, \"total\": 20, \"totalPages\": 4, \"hasMore\": true, \"currentSeasonId\": 12009093}"
+    }
+  ],
+  "extraProbes": [
+    {
+      "label": "events status=finished",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "finished"
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 2239,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 8,
+          "totalPages": 2,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 46983765, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 80588626, \"name\": \"Dallas Stars\"}, \"awayTeam\": {\"id\": 87796464, \"name\": \"Boston Bruins\"}, \"startTimestamp\": 1792540800, \"status\": \"finished\", \"homeScore\": {\"current\": 3, \"display\": 3, \"period1\": 0, \"period2\": 1, \"period3\": 1, \"overtime\": 1, \"normaltime\": 2}, \"awayScore\": {\"current\": 2, \"display\": 2, \"period1\": 1, \"period2\": 1, \"period3\": 0, \"overtime\": 0, \"normaltime\": 2}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 73513513, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 24490165, \"name\": \"St. Louis Blues\"}, \"awayTeam\": {\"id\": 59830519, \"name\": \"Winnipeg Jets\"}, \"startTimestamp\": 1792540800, \"status\": \"finished\", \"homeScore\": {\"current\": 2, \"display\": 2, \"period1\": 1, \"period2\": 0, \"period3\": 1, \"normaltime\": 2}, \"awayScore\": {\"current\": 1, \"display\": 1, \"period1\": 0, \"period2\": 0, \"period3\": 1, \"normaltime\": 1}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 98151763, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 79207669, \"name\": \"Edmonton Oilers\"}, \"awayTeam\": {\"id\": 37460667, \"name\": \"Minnesota Wild\"}, \"startTimestamp\": 1792544400, \"status\": \"finished\", \"homeScore\": {\"current\": 4, \"displ\u2026"
+    },
+    {
+      "label": "events status=inprogress",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "inprogress"
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 1117,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 3,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 3,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 58366713, \"tournamentId\": 32046138, \"homeTeam\": {\"id\": 83632571, \"name\": \"Metallurg Magnitogorsk\"}, \"awayTeam\": {\"id\": 51000352, \"name\": \"Salavat Yulaev Ufa\"}, \"startTimestamp\": 1792591200, \"status\": \"inprogress\", \"homeScore\": {\"current\": 3, \"display\": 3, \"period1\": 3, \"period2\": 0}, \"awayScore\": {\"current\": 1, \"display\": 1, \"period1\": 1, \"period2\": 0}, \"seasonId\": 72361542, \"competitionName\": \"KHL\"}, {\"id\": 98503826, \"tournamentId\": 66603548, \"homeTeam\": {\"id\": 68823559, \"name\": \"Kiekko-Espoo\"}, \"awayTeam\": {\"id\": 92315906, \"name\": \"KooKoo Kouvola\"}, \"startTimestamp\": 1792596600, \"status\": \"inprogress\", \"homeScore\": {\"current\": 0, \"display\": 0, \"period1\": 0}, \"awayScore\": {\"current\": 0, \"display\": 0, \"period1\": 0}, \"seasonId\": 91710997, \"competitionName\": \"Liiga\"}, {\"id\": 62385929, \"tournamentId\": 66603548, \"homeTeam\": {\"id\": 22394327, \"name\": \"Tappara Tampere\"}, \"awayTeam\": {\"id\": 14392016, \"name\": \"Porin \\u00c4ss\\u00e4t\"}, \"startTimestamp\": 1792596600, \"status\": \"inprogress\", \"homeScore\": {\"current\": 0, \"display\": 0, \"period1\": 0}, \"awayScore\": {\"current\": 0, \"display\": 0, \"period1\": 0}, \"seasonId\": 91710997, \"competitionName\": \"Liiga\"}], \"page\": 1, \"limit\": 5,\u2026"
+    },
+    {
+      "label": "events page=9999",
+      "path": "events",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 76,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 0,
+        "pagination": {
+          "page": 9999,
+          "limit": 5,
+          "total": 33,
+          "totalPages": 7,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [], \"page\": 9999, \"limit\": 5, \"total\": 33, \"totalPages\": 7, \"hasMore\": false}"
+    },
+    {
+      "label": "events page=2 differs from page=1",
+      "path": "events",
+      "params": {
+        "page": 2,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 1997,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "items",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "items",
+        "listCount": 5,
+        "pagination": {
+          "page": 2,
+          "limit": 5,
+          "total": 33,
+          "totalPages": 7,
+          "hasMore": true
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "tournamentId",
+          "homeTeam",
+          "awayTeam",
+          "startTimestamp",
+          "status",
+          "homeScore",
+          "awayScore",
+          "seasonId",
+          "competitionName"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"items\": [{\"id\": 92487897, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 54211218, \"name\": \"Vancouver Canucks\"}, \"awayTeam\": {\"id\": 33836608, \"name\": \"Carolina Hurricanes\"}, \"startTimestamp\": 1792548000, \"status\": \"finished\", \"homeScore\": {\"current\": 3, \"display\": 3, \"period1\": 2, \"period2\": 1, \"period3\": 0, \"normaltime\": 3}, \"awayScore\": {\"current\": 6, \"display\": 6, \"period1\": 2, \"period2\": 1, \"period3\": 3, \"normaltime\": 6}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 41430345, \"tournamentId\": 40307999, \"homeTeam\": {\"id\": 12760890, \"name\": \"Vegas Golden Knights\"}, \"awayTeam\": {\"id\": 93594620, \"name\": \"Tampa Bay Lightning\"}, \"startTimestamp\": 1792549800, \"status\": \"finished\", \"homeScore\": {\"current\": 2, \"display\": 2, \"period1\": 2, \"period2\": 0, \"period3\": 0, \"normaltime\": 2}, \"awayScore\": {\"current\": 6, \"display\": 6, \"period1\": 2, \"period2\": 3, \"period3\": 1, \"normaltime\": 6}, \"seasonId\": 12009093, \"competitionName\": \"NHL\"}, {\"id\": 54370958, \"tournamentId\": 32046138, \"homeTeam\": {\"id\": 18441352, \"name\": \"Admiral Vladivostok\"}, \"awayTeam\": {\"id\": 16674724, \"name\": \"Barys Astana\"}, \"startTimestamp\": 1792575000, \"status\": \"finished\", \"homeScore\": {\"current\": 5, \"display\": 5\u2026",
+      "paginationCheck": {
+        "page1FirstId": 46983765,
+        "page2FirstId": 92487897,
+        "differentPages": true
+      }
+    },
+    {
+      "label": "search missing q",
+      "path": "search",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 400,
+      "classification": {
+        "http": 400,
+        "bytes": 394,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 400,
+          "message": [
+            "q may only contain letters, numbers, spaces, apostrophes, periods, and hyphens",
+            "q must be shorter than or equal to 80 characters",
+            "q must be longer than or equal to 2 characters",
+            "q must be a string"
+          ],
+          "error": "Bad Request",
+          "details": null
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 400, \"message\": [\"q may only contain letters, numbers, spaces, apostrophes, periods, and hyphens\", \"q must be shorter than or equal to 80 characters\", \"q must be longer than or equal to 2 characters\", \"q must be a string\"], \"error\": \"Bad Request\", \"path\": \"/api/v1/ice_hockey/search?page=1&limit=5\", \"timestamp\": \"2026-10-21T15:49:32.174Z\", \"requestId\": \"314d1c91-92df-4039-ada7-8f462f8f3bbb\"}"
+    },
+    {
+      "label": "event id non-numeric",
+      "path": "event/abc",
+      "params": null,
+      "http": 400,
+      "classification": {
+        "http": 400,
+        "bytes": 244,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 400,
+          "message": "Event id abc is neither a numeric id nor a live-only match ref.",
+          "error": "Bad Request",
+          "details": null
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 400, \"message\": \"Event id abc is neither a numeric id nor a live-only match ref.\", \"error\": \"Bad Request\", \"path\": \"/api/v1/ice_hockey/event/abc\", \"timestamp\": \"2026-10-21T15:49:32.608Z\", \"requestId\": \"9ad73aa0-0f75-4868-87b3-6fae806b6445\"}"
+    },
+    {
+      "label": "event id unknown",
+      "path": "event/999999999",
+      "params": null,
+      "http": 404,
+      "classification": {
+        "http": 404,
+        "bytes": 283,
+        "responseKind": "error envelope",
+        "topLevelKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "listKey": null,
+        "listCount": null,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": {
+          "statusCode": 404,
+          "message": "IceHockey match 999999999 was not found.",
+          "error": "NotFound",
+          "details": {
+            "code": "EVENT_NOT_FOUND",
+            "reason": "unknown_id"
+          }
+        },
+        "notes": []
+      },
+      "bodyPreview": "{\"statusCode\": 404, \"message\": \"IceHockey match 999999999 was not found.\", \"error\": \"NotFound\", \"details\": {\"code\": \"EVENT_NOT_FOUND\", \"reason\": \"unknown_id\"}, \"path\": \"/api/v1/ice_hockey/event/999999999\", \"timestamp\": \"2026-10-21T15:49:33.043Z\", \"requestId\": \"eab82e01-1ca1-41c9-b5ac-1dec7601e98a\"}"
+    },
+    {
+      "label": "standings home",
+      "path": "unique-tournament/40307999/season/12009093/standings/home",
+      "params": null,
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 59,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "standings"
+        ],
+        "listKey": "standings",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "descriptions",
+          "rows"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"standings\": [{\"type\": \"home\", \"descriptions\": [], \"rows\": []}]}"
+    },
+    {
+      "label": "standings away",
+      "path": "unique-tournament/40307999/season/12009093/standings/away",
+      "params": null,
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 59,
+        "responseKind": "list envelope",
+        "topLevelKeys": [
+          "standings"
+        ],
+        "listKey": "standings",
+        "listCount": 1,
+        "pagination": null,
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "type",
+          "descriptions",
+          "rows"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"standings\": [{\"type\": \"away\", \"descriptions\": [], \"rows\": []}]}"
+    },
+    {
+      "label": "player events next",
+      "path": "player/69552988/events/next",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 73,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 0,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 0,
+          "totalPages": 0,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": null,
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [], \"page\": 1, \"limit\": 5, \"total\": 0, \"totalPages\": 0, \"hasMore\": false}"
+    },
+    {
+      "label": "team events next",
+      "path": "team/58336109/events/next",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "classification": {
+        "http": 200,
+        "bytes": 16973,
+        "responseKind": "paginated list",
+        "topLevelKeys": [
+          "events",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ],
+        "listKey": "events",
+        "listCount": 4,
+        "pagination": {
+          "page": 1,
+          "limit": 5,
+          "total": 4,
+          "totalPages": 1,
+          "hasMore": false
+        },
+        "nestedObjectKeys": null,
+        "sampleRowKeys": [
+          "id",
+          "homeTeam",
+          "awayTeam",
+          "tournament",
+          "season",
+          "roundInfo",
+          "status",
+          "statusType",
+          "startTimestamp",
+          "endTimestamp",
+          "sourceUpdatedAt",
+          "homeScore",
+          "awayScore",
+          "format",
+          "winnerCode",
+          "venue",
+          "time",
+          "hasGlobalHighlights",
+          "finalResultOnly",
+          "toss",
+          "officials"
+        ],
+        "apiError": null,
+        "notes": []
+      },
+      "bodyPreview": "{\"events\": [{\"id\": 13888228, \"homeTeam\": {\"id\": 58336109, \"name\": \"Toronto Maple Leafs\", \"shortName\": \"Maple Leafs\", \"fullName\": null, \"nameCode\": \"TOR\", \"type\": 0, \"gender\": \"M\", \"national\": false, \"disabled\": false, \"userCount\": 14911, \"sport\": {\"name\": \"Hockey\"}, \"country\": {\"name\": \"Canada\", \"alpha2\": \"CA\", \"alpha3\": \"CAN\"}, \"teamColors\": {\"primary\": \"#ffffff\", \"secondary\": \"#002868\", \"text\": \"#002868\"}, \"fieldTranslations\": {\"nameTranslation\": {\"ar\": \"\\u062a\\u0648\\u0631\\u0648\\u0646\\u062a\\u0648 \\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}, \"shortNameTranslation\": {\"ar\": \"\\u0645\\u0627\\u0628\\u0644 \\u0644\\u064a\\u0641\\u0632\", \"bn\": \"\\u09ae\\u09cd\\u09af\\u09be\\u09aa\\u09c7\\u09b2 \\u09b2\\u09bf\\u09ab\\u09b8\", \"hi\": \"\\u092e\\u0947\\u092a\\u0932 \\u0932\\u0940\\u092b\\u094d\\u0938\", \"ru\": \"\\u0422\\u043e\\u0440\\u043e\\u043d\\u0442\\u043e \\u041c\\u044d\\u0439\\u043f\\u043b \\u041b\\u0438\\u0444\\u0441\"}}, \"venue\": null, \"category\": null, \"tournament\": null, \"primaryUniqueTournament\": null, \"foundationDateTimestamp\": null, \"logoUrl\": null, \"manager\": null}, \"awayTeam\": {\"id\": 65768659, \"name\": \"New Yor\u2026"
+    }
+  ]
+}

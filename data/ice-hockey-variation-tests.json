@@ -1,0 +1,3109 @@
+{
+  "generatedAt": "2026-10-21T16:00:32.481494+00:00",
+  "sport": "ice_hockey",
+  "discoveredIds": {
+    "teamId": 58336109,
+    "teamName": "Maple Leafs",
+    "team2Id": 67204796,
+    "team2Name": "Montr\u00e9al Canadiens",
+    "playerId": 69552988,
+    "playerName": "McDavid",
+    "player2Id": 94770949,
+    "player2Name": "Sidney Crosby",
+    "tournamentId": 40307999,
+    "seasonId": 12009093,
+    "statsPlayerId": 47474035
+  },
+  "discoveredEventIdsByState": {
+    "finished": 14124239,
+    "canceled": 75533566,
+    "notstarted": 13888228,
+    "inprogress": 58366713
+  },
+  "summary": {
+    "totalTests": 123,
+    "byVerdict": {
+      "PASS": 78,
+      "PASS_EMPTY": 30,
+      "EXPECTED": 15
+    },
+    "byCategory": {
+      "pagination": 12,
+      "pagination_edge": 24,
+      "limit_variation": 6,
+      "status_filter": 7,
+      "query_params": 3,
+      "response_stats": 12,
+      "list_vs_detail": 3,
+      "data_validity": 12,
+      "off_catalog": 3,
+      "auth": 4,
+      "event_state_variation": 24,
+      "entity_variation": 4,
+      "enrichment_type_variation": 9
+    }
+  },
+  "findings": [
+    "events page 2000: empty 200 on page 2000 but total=33 still set.",
+    "events page 9999: empty 200 on page 9999 but total=33 still set.",
+    "events page 8 beyond totalPages: empty 200 on page 8 but total=33 still set.",
+    "players page 9999: empty 200 on page 9999 but total=15177 still set.",
+    "players page 3037 beyond totalPages: empty 200 on page 3037 but total=15177 still set.",
+    "teams page 2000: empty 200 on page 2000 but total=532 still set.",
+    "teams page 9999: empty 200 on page 9999 but total=532 still set.",
+    "teams page 108 beyond totalPages: empty 200 on page 108 but total=532 still set.",
+    "team events last page 2000: empty 200 on page 2000 but total=1106 still set.",
+    "team events last page 9999: empty 200 on page 9999 but total=1106 still set.",
+    "team events last page 223 beyond totalPages: empty 200 on page 223 but total=1106 still set.",
+    "ut events page 9999: empty 200 on page 9999 but total=16141 still set.",
+    "ut events page 3230 beyond totalPages: empty 200 on page 3230 but total=16141 still set.",
+    "incidents (short list) page 2000: empty 200 on page 2000 but total=26 still set.",
+    "incidents (short list) page 9999: empty 200 on page 9999 but total=26 still set.",
+    "incidents (short list) page 7 beyond totalPages: empty 200 on page 7 but total=26 still set."
+  ],
+  "tests": [
+    {
+      "category": "pagination",
+      "name": "events page 1 vs page 2",
+      "path": "events",
+      "params": {
+        "page": "1 then 2",
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 1997,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 92487897,
+        "page": 2,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "page1FirstId=46983765 page2FirstId=92487897 different=True",
+      "json": true,
+      "extra": {
+        "page1FirstId": 46983765,
+        "page2FirstId": 92487897,
+        "differentPages": true
+      }
+    },
+    {
+      "category": "pagination",
+      "name": "events page 1",
+      "path": "events",
+      "params": {
+        "limit": 5,
+        "page": 1
+      },
+      "http": 200,
+      "bytes": 2240,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination",
+      "name": "players page 1 vs page 2",
+      "path": "players",
+      "params": {
+        "page": "1 then 2",
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 464,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 95469992,
+        "page": 2,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "page1FirstId=36979316 page2FirstId=95469992 different=True",
+      "json": true,
+      "extra": {
+        "page1FirstId": 36979316,
+        "page2FirstId": 95469992,
+        "differentPages": true
+      }
+    },
+    {
+      "category": "pagination",
+      "name": "players page 1",
+      "path": "players",
+      "params": {
+        "limit": 5,
+        "page": 1
+      },
+      "http": 200,
+      "bytes": 455,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 36979316,
+        "page": 1,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination",
+      "name": "teams page 1 vs page 2",
+      "path": "teams",
+      "params": {
+        "page": "1 then 2",
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 385,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 27304806,
+        "page": 2,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "page1FirstId=67204796 page2FirstId=27304806 different=True",
+      "json": true,
+      "extra": {
+        "page1FirstId": 67204796,
+        "page2FirstId": 27304806,
+        "differentPages": true
+      }
+    },
+    {
+      "category": "pagination",
+      "name": "teams page 1",
+      "path": "teams",
+      "params": {
+        "limit": 5,
+        "page": 1
+      },
+      "http": 200,
+      "bytes": 384,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 67204796,
+        "page": 1,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination",
+      "name": "team events last page 1 vs page 2",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": "1 then 2",
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 18934,
+      "meta": {
+        "listKey": "events",
+        "count": 5,
+        "firstId": 11431350,
+        "page": 2,
+        "limit": 5,
+        "total": 1106,
+        "totalPages": 222,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "page1FirstId=14124239 page2FirstId=11431350 different=True",
+      "json": true,
+      "extra": {
+        "page1FirstId": 14124239,
+        "page2FirstId": 11431350,
+        "differentPages": true
+      }
+    },
+    {
+      "category": "pagination",
+      "name": "team events last page 1",
+      "path": "team/58336109/events/last",
+      "params": {
+        "limit": 5,
+        "page": 1
+      },
+      "http": 200,
+      "bytes": 18917,
+      "meta": {
+        "listKey": "events",
+        "count": 5,
+        "firstId": 14124239,
+        "page": 1,
+        "limit": 5,
+        "total": 1106,
+        "totalPages": 222,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination",
+      "name": "ut events page 1 vs page 2",
+      "path": "unique-tournament/40307999/events",
+      "params": {
+        "page": "1 then 2",
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 17244,
+      "meta": {
+        "listKey": "events",
+        "count": 5,
+        "firstId": 48708715,
+        "page": 2,
+        "limit": 5,
+        "total": 16141,
+        "totalPages": 3229,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "page1FirstId=53302382 page2FirstId=48708715 different=True",
+      "json": true,
+      "extra": {
+        "page1FirstId": 53302382,
+        "page2FirstId": 48708715,
+        "differentPages": true
+      }
+    },
+    {
+      "category": "pagination",
+      "name": "ut events page 1",
+      "path": "unique-tournament/40307999/events",
+      "params": {
+        "limit": 5,
+        "page": 1
+      },
+      "http": 200,
+      "bytes": 17072,
+      "meta": {
+        "listKey": "events",
+        "count": 5,
+        "firstId": 53302382,
+        "page": 1,
+        "limit": 5,
+        "total": 16141,
+        "totalPages": 3229,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination",
+      "name": "incidents page 1 vs page 2",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": "1 then 2",
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 5952,
+      "meta": {
+        "listKey": "incidents",
+        "count": 5,
+        "firstId": 57901947,
+        "page": 2,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "page1FirstId=25961100 page2FirstId=57901947 different=True",
+      "json": true,
+      "extra": {
+        "page1FirstId": 25961100,
+        "page2FirstId": 57901947,
+        "differentPages": true
+      }
+    },
+    {
+      "category": "pagination",
+      "name": "incidents page 1",
+      "path": "event/14124239/incidents",
+      "params": {
+        "limit": 5,
+        "page": 1
+      },
+      "http": 200,
+      "bytes": 9590,
+      "meta": {
+        "listKey": "incidents",
+        "count": 5,
+        "firstId": 25961100,
+        "page": 1,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events page 2000",
+      "path": "events",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 76,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 2000,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events page 9999",
+      "path": "events",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 76,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 9999,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events last page (7)",
+      "path": "events",
+      "params": {
+        "page": 7,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 881,
+      "meta": {
+        "listKey": "items",
+        "count": 3,
+        "firstId": 37312300,
+        "page": 7,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": false,
+        "lengthVsLimit": "3 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "events page 8 beyond totalPages",
+      "path": "events",
+      "params": {
+        "page": 8,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 73,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 8,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players page 2000",
+      "path": "players",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 464,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 40917266,
+        "page": 2000,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players page 9999",
+      "path": "players",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 82,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 9999,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players last page (3036)",
+      "path": "players",
+      "params": {
+        "page": 3036,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 230,
+      "meta": {
+        "listKey": "items",
+        "count": 2,
+        "firstId": 97225406,
+        "page": 3036,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": false,
+        "lengthVsLimit": "2 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "players page 3037 beyond totalPages",
+      "path": "players",
+      "params": {
+        "page": 3037,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 82,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 3037,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "teams page 2000",
+      "path": "teams",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 79,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 2000,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "teams page 9999",
+      "path": "teams",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 79,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 9999,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "teams last page (107)",
+      "path": "teams",
+      "params": {
+        "page": 107,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 197,
+      "meta": {
+        "listKey": "items",
+        "count": 2,
+        "firstId": 98507733,
+        "page": 107,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": false,
+        "lengthVsLimit": "2 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "teams page 108 beyond totalPages",
+      "path": "teams",
+      "params": {
+        "page": 108,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 78,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 108,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last page 2000",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 81,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "firstId": null,
+        "page": 2000,
+        "limit": 5,
+        "total": 1106,
+        "totalPages": 222,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last page 9999",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 81,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "firstId": null,
+        "page": 9999,
+        "limit": 5,
+        "total": 1106,
+        "totalPages": 222,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last last page (222)",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": 222,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 3589,
+      "meta": {
+        "listKey": "events",
+        "count": 1,
+        "firstId": 25976049,
+        "page": 222,
+        "limit": 5,
+        "total": 1106,
+        "totalPages": 222,
+        "hasMore": false,
+        "lengthVsLimit": "1 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "team events last page 223 beyond totalPages",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": 223,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 80,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "firstId": null,
+        "page": 223,
+        "limit": 5,
+        "total": 1106,
+        "totalPages": 222,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events page 2000",
+      "path": "unique-tournament/40307999/events",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 21471,
+      "meta": {
+        "listKey": "events",
+        "count": 5,
+        "firstId": 96486023,
+        "page": 2000,
+        "limit": 5,
+        "total": 16141,
+        "totalPages": 3229,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events page 9999",
+      "path": "unique-tournament/40307999/events",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 83,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "firstId": null,
+        "page": 9999,
+        "limit": 5,
+        "total": 16141,
+        "totalPages": 3229,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events last page (3229)",
+      "path": "unique-tournament/40307999/events",
+      "params": {
+        "page": 3229,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 3778,
+      "meta": {
+        "listKey": "events",
+        "count": 1,
+        "firstId": 43480022,
+        "page": 3229,
+        "limit": 5,
+        "total": 16141,
+        "totalPages": 3229,
+        "hasMore": false,
+        "lengthVsLimit": "1 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "ut events page 3230 beyond totalPages",
+      "path": "unique-tournament/40307999/events",
+      "params": {
+        "page": 3230,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 83,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "firstId": null,
+        "page": 3230,
+        "limit": 5,
+        "total": 16141,
+        "totalPages": 3229,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "incidents (short list) page 2000",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": 2000,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 80,
+      "meta": {
+        "listKey": "incidents",
+        "count": 0,
+        "firstId": null,
+        "page": 2000,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "incidents (short list) page 9999",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": 9999,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 80,
+      "meta": {
+        "listKey": "incidents",
+        "count": 0,
+        "firstId": null,
+        "page": 9999,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "incidents (short list) last page (6)",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": 6,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 441,
+      "meta": {
+        "listKey": "incidents",
+        "count": 1,
+        "firstId": null,
+        "page": 6,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": false,
+        "lengthVsLimit": "1 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "pagination_edge",
+      "name": "incidents (short list) page 7 beyond totalPages",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": 7,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 77,
+      "meta": {
+        "listKey": "incidents",
+        "count": 0,
+        "firstId": null,
+        "page": 7,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "Empty page beyond totalPages (200 OK, not 404). Leftover high total is a defect.",
+      "json": true
+    },
+    {
+      "category": "limit_variation",
+      "name": "events limit=1",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 1
+      },
+      "http": 200,
+      "bytes": 507,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 1,
+        "total": 33,
+        "totalPages": 33,
+        "hasMore": true,
+        "lengthVsLimit": "1 vs limit 1"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "limit_variation",
+      "name": "events limit=100",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 100
+      },
+      "http": 200,
+      "bytes": 10576,
+      "meta": {
+        "listKey": "items",
+        "count": 33,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 100,
+        "total": 33,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "33 vs limit 100"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "limit_variation",
+      "name": "events limit=2000",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 2000
+      },
+      "http": 400,
+      "bytes": 232,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "list"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "limit_variation",
+      "name": "search limit=1",
+      "path": "search",
+      "params": {
+        "q": "Maple Leafs",
+        "page": 1,
+        "limit": 1
+      },
+      "http": 200,
+      "bytes": 164,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "firstId": 58336109,
+        "page": 1,
+        "limit": 1,
+        "total": 1,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "1 vs limit 1"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "limit_variation",
+      "name": "search limit=100",
+      "path": "search",
+      "params": {
+        "q": "Maple Leafs",
+        "page": 1,
+        "limit": 100
+      },
+      "http": 200,
+      "bytes": 166,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "firstId": 58336109,
+        "page": 1,
+        "limit": 100,
+        "total": 1,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "1 vs limit 100"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "limit_variation",
+      "name": "search limit=2000",
+      "path": "search",
+      "params": {
+        "q": "Maple Leafs",
+        "page": 1,
+        "limit": 2000
+      },
+      "http": 400,
+      "bytes": 246,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "list"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=finished",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "finished"
+      },
+      "http": 200,
+      "bytes": 2239,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 5,
+        "total": 8,
+        "totalPages": 2,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=inprogress",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "inprogress"
+      },
+      "http": 200,
+      "bytes": 1117,
+      "meta": {
+        "listKey": "items",
+        "count": 3,
+        "firstId": 58366713,
+        "page": 1,
+        "limit": 5,
+        "total": 3,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "3 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=notstarted",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "notstarted"
+      },
+      "http": 200,
+      "bytes": 1432,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 87384786,
+        "page": 1,
+        "limit": 5,
+        "total": 22,
+        "totalPages": 5,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=canceled",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "canceled"
+      },
+      "http": 200,
+      "bytes": 72,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=postponed",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "postponed"
+      },
+      "http": 200,
+      "bytes": 72,
+      "meta": {
+        "listKey": "items",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "events status=ended",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5,
+        "status": "ended"
+      },
+      "http": 400,
+      "bytes": 359,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "list"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "status_filter",
+      "name": "team events last vs events?status=finished",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": 1,
+        "limit": 30
+      },
+      "http": 200,
+      "bytes": 124865,
+      "meta": {
+        "listKey": "events",
+        "count": 30,
+        "firstId": 14124239,
+        "page": 1,
+        "limit": 30,
+        "total": 1106,
+        "totalPages": 37,
+        "hasMore": true,
+        "lengthVsLimit": "30 vs limit 30"
+      },
+      "verdict": "PASS",
+      "notes": "teamLastFinishedOnPage=30 eventsFinishedTotal=8 unfilteredTotal=33",
+      "json": true
+    },
+    {
+      "category": "query_params",
+      "name": "invalid standings type",
+      "path": "unique-tournament/40307999/season/12009093/standings/nope",
+      "params": null,
+      "http": 400,
+      "bytes": 272,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "query_params",
+      "name": "invalid events direction",
+      "path": "team/58336109/events/sideways",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 400,
+      "bytes": 259,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "query_params",
+      "name": "invalid calendar date",
+      "path": "unique-tournament/40307999/scheduled-events/not-a-date",
+      "params": null,
+      "http": 400,
+      "bytes": 285,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "events",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 2240,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "players",
+      "path": "players",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 455,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 36979316,
+        "page": 1,
+        "limit": 5,
+        "total": 15177,
+        "totalPages": 3036,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "teams",
+      "path": "teams",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 384,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 67204796,
+        "page": 1,
+        "limit": 5,
+        "total": 532,
+        "totalPages": 107,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "tournaments",
+      "path": "tournaments",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 929,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 40307999,
+        "page": 1,
+        "limit": 5,
+        "total": 115,
+        "totalPages": 23,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "search",
+      "path": "search",
+      "params": {
+        "q": "Maple Leafs",
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 164,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "firstId": 58336109,
+        "page": 1,
+        "limit": 5,
+        "total": 1,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "1 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 1 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "team roster (no pagination expected)",
+      "path": "team/58336109/players",
+      "params": null,
+      "http": 200,
+      "bytes": 175397,
+      "meta": {
+        "listKey": "players",
+        "count": 53,
+        "firstId": 47474035,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS",
+      "notes": "Omits pagination keys.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "standings total (no pagination expected)",
+      "path": "unique-tournament/40307999/season/12009093/standings/total",
+      "params": null,
+      "http": 200,
+      "bytes": 39563,
+      "meta": {
+        "listKey": "standings",
+        "count": 1,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS",
+      "notes": "Omits pagination keys.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "incidents",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 9590,
+      "meta": {
+        "listKey": "incidents",
+        "count": 5,
+        "firstId": 25961100,
+        "page": 1,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "player-statistics",
+      "path": "event/14124239/player-statistics",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 11747,
+      "meta": {
+        "listKey": "playerStatistics",
+        "count": 5,
+        "firstId": 47474035,
+        "page": 1,
+        "limit": 5,
+        "total": 22,
+        "totalPages": 5,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "team media",
+      "path": "team/58336109/media",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 1914,
+      "meta": {
+        "listKey": "media",
+        "count": 5,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 10,
+        "totalPages": 2,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "team unique-tournaments",
+      "path": "team/58336109/unique-tournaments",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 1448,
+      "meta": {
+        "listKey": "uniqueTournaments",
+        "count": 2,
+        "firstId": 40307999,
+        "page": 1,
+        "limit": 5,
+        "total": 2,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "2 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 2 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "response_stats",
+      "name": "ut seasons",
+      "path": "unique-tournament/40307999/seasons",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 425,
+      "meta": {
+        "listKey": "seasons",
+        "count": 5,
+        "firstId": 12009093,
+        "page": 1,
+        "limit": 5,
+        "total": 20,
+        "totalPages": 4,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "Pagination present; 5 vs limit 5.",
+      "json": true
+    },
+    {
+      "category": "list_vs_detail",
+      "name": "same event list vs detail status/score/competition",
+      "path": "event/46983765",
+      "params": null,
+      "http": 200,
+      "bytes": 3725,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "list.status type={'status': 'finished', 'statusType': 'str'}; detail.status={'code': 110, 'type': 'finished', 'description': 'AET'}; list.competitionName=NHL; detail.tournament=dict; detail.homeScore keys=['current', 'display', 'period1', 'period2', 'period3', 'overtime', 'normaltime']; list scores={'homeScore': {'current': 3, 'display': 3, 'period1': 0, 'period2': 1, 'period3': 1, 'overtime': 1, 'normaltime': 2}, 'awayScore': {'current': 2, 'display': 2, 'period1': 1, 'period2': 1, 'period3': 0, 'overtime': 0, 'normaltime': 2}}",
+      "json": true,
+      "extra": {
+        "listStatus": {
+          "status": "finished",
+          "statusType": "str"
+        },
+        "detailStatus": {
+          "code": 110,
+          "type": "finished",
+          "description": "AET"
+        },
+        "listCompetitionName": "NHL",
+        "detailTournamentKeys": [
+          "name",
+          "isLive",
+          "isGroup",
+          "priority",
+          "category",
+          "uniqueTournament",
+          "fieldTranslations"
+        ],
+        "detailHomeScoreKeys": [
+          "current",
+          "display",
+          "period1",
+          "period2",
+          "period3",
+          "overtime",
+          "normaltime"
+        ],
+        "listScores": {
+          "homeScore": {
+            "current": 3,
+            "display": 3,
+            "period1": 0,
+            "period2": 1,
+            "period3": 1,
+            "overtime": 1,
+            "normaltime": 2
+          },
+          "awayScore": {
+            "current": 2,
+            "display": 2,
+            "period1": 1,
+            "period2": 1,
+            "period3": 0,
+            "overtime": 0,
+            "normaltime": 2
+          }
+        }
+      }
+    },
+    {
+      "category": "list_vs_detail",
+      "name": "fixtures/today vs default /events",
+      "path": "fixtures/today",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 7023,
+      "meta": {
+        "listKey": "items",
+        "count": 20,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 20,
+        "total": 33,
+        "totalPages": 2,
+        "hasMore": true,
+        "lengthVsLimit": "20 vs limit 20"
+      },
+      "verdict": "PASS",
+      "notes": "sameIds=True sameBytes=False eventsBytes=2240 fixturesBytes=7023",
+      "json": true,
+      "extra": {
+        "eventsBytes": 2240,
+        "fixturesBytes": 7023,
+        "eventsIds": [
+          46983765,
+          73513513,
+          98151763,
+          88005616,
+          68400619
+        ],
+        "fixturesIds": [
+          46983765,
+          73513513,
+          98151763,
+          88005616,
+          68400619
+        ],
+        "sameIds": true,
+        "sameBytes": false
+      }
+    },
+    {
+      "category": "list_vs_detail",
+      "name": "events list sample",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 2240,
+      "meta": {
+        "listKey": "items",
+        "count": 5,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 5,
+        "total": 33,
+        "totalPages": 7,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "data_validity",
+      "name": "player.team null vs nested copies",
+      "path": "player/69552988",
+      "params": null,
+      "http": 200,
+      "bytes": 672,
+      "meta": {
+        "topKeys": [
+          "player"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "player.team=None player.country=None keys=['id', 'name', 'firstName', 'lastName', 'shortName', 'position', 'gender', 'height', 'jerseyNumber', 'userCount', 'dateOfBirthTimestamp', 'marketValueCurrency', 'proposedMarketValueRaw', 'fieldTranslations', 'team']",
+      "json": true,
+      "extra": {
+        "team": null,
+        "country": null,
+        "teamId": null
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "team.country on profile",
+      "path": "team/58336109",
+      "params": null,
+      "http": 200,
+      "bytes": 842,
+      "meta": {
+        "topKeys": [
+          "team"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "team.country={'name': 'Canada', 'alpha2': 'CA', 'alpha3': 'CAN'} national=False",
+      "json": true,
+      "extra": {
+        "country": {
+          "name": "Canada",
+          "alpha2": "CA",
+          "alpha3": "CAN"
+        }
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "h2h null duels",
+      "path": "event/14124239/h2h",
+      "params": null,
+      "http": 200,
+      "bytes": 69,
+      "meta": {
+        "topKeys": [
+          "teamDuel",
+          "managerDuel"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "teamDuel={'homeWins': 6, 'awayWins': 4, 'draws': 0} managerDuel=None",
+      "json": true,
+      "extra": {
+        "teamDuel": {
+          "homeWins": 6,
+          "awayWins": 4,
+          "draws": 0
+        },
+        "managerDuel": null
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "best-players (optional enrichment)",
+      "path": "event/14124239/best-players",
+      "params": null,
+      "http": 200,
+      "bytes": 17216,
+      "meta": {
+        "listKey": "leaderboard",
+        "count": 10,
+        "firstId": 36067796,
+        "page": 1,
+        "limit": 10,
+        "total": 10,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "10 vs limit 10"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "data_validity",
+      "name": "team rankings (optional enrichment)",
+      "path": "team/58336109/rankings",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 404,
+      "bytes": 343,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "NotFound",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "data_validity",
+      "name": "off-catalog top-performers",
+      "path": "event/14124239/top-performers",
+      "params": null,
+      "http": 404,
+      "bytes": 258,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Not Found",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "data_validity",
+      "name": "standings total row count",
+      "path": "unique-tournament/40307999/season/12009093/standings/total",
+      "params": null,
+      "http": 200,
+      "bytes": 39563,
+      "meta": {
+        "listKey": "standings",
+        "count": 1,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS",
+      "notes": "tables=1 rows=96",
+      "json": true
+    },
+    {
+      "category": "data_validity",
+      "name": "standings home row count",
+      "path": "unique-tournament/40307999/season/12009093/standings/home",
+      "params": null,
+      "http": 200,
+      "bytes": 59,
+      "meta": {
+        "listKey": "standings",
+        "count": 1,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "tables=1 rows=0",
+      "json": true,
+      "extra": {
+        "force_verdict": "PASS_EMPTY"
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "standings away row count",
+      "path": "unique-tournament/40307999/season/12009093/standings/away",
+      "params": null,
+      "http": 200,
+      "bytes": 59,
+      "meta": {
+        "listKey": "standings",
+        "count": 1,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "tables=1 rows=0",
+      "json": true,
+      "extra": {
+        "force_verdict": "PASS_EMPTY"
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "featured-event status",
+      "path": "team/58336109/featured-event",
+      "params": null,
+      "http": 200,
+      "bytes": 3908,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "featuredEventId=92441270 status=finished",
+      "json": true,
+      "extra": {
+        "status": "finished",
+        "eventId": 92441270
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "lineup jersey numbers",
+      "path": "event/14124239/lineups",
+      "params": null,
+      "http": 200,
+      "bytes": 10923,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "jerseyFilled=39 jerseyNull=0",
+      "json": true,
+      "extra": {
+        "jerseyFilled": 39,
+        "jerseyNull": 0
+      }
+    },
+    {
+      "category": "data_validity",
+      "name": "error message shape (non-numeric event id)",
+      "path": "event/abc",
+      "params": null,
+      "http": 400,
+      "bytes": 244,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Bad Request",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "message type=str error='Bad Request' detailsType=NoneType",
+      "json": true,
+      "extra": {
+        "messageType": "str",
+        "error": "Bad Request",
+        "detailsType": "NoneType",
+        "details": null
+      }
+    },
+    {
+      "category": "off_catalog",
+      "name": "football-style player season stats (on-catalog for hockey)",
+      "path": "player/69552988/unique-tournament/40307999/season/12009093/statistics",
+      "params": null,
+      "http": 200,
+      "bytes": 904,
+      "meta": {
+        "topKeys": [
+          "player",
+          "team",
+          "statistics",
+          "inconsistencies",
+          "playerId",
+          "teamId",
+          "uniqueTournamentId",
+          "seasonId"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "off_catalog",
+      "name": "off-catalog player/{id}/statistics",
+      "path": "player/69552988/statistics",
+      "params": null,
+      "http": 404,
+      "bytes": 252,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Not Found",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "off_catalog",
+      "name": "off-catalog team season statistics",
+      "path": "team/58336109/unique-tournament/40307999/season/12009093/statistics",
+      "params": null,
+      "http": 200,
+      "bytes": 1465,
+      "meta": {
+        "topKeys": [
+          "player",
+          "team",
+          "statistics",
+          "inconsistencies",
+          "playerId",
+          "teamId",
+          "uniqueTournamentId",
+          "seasonId"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "auth",
+      "name": "/events?limit=1 both headers",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 1
+      },
+      "http": 200,
+      "bytes": 507,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 1,
+        "total": 33,
+        "totalPages": 33,
+        "hasMore": true,
+        "lengthVsLimit": "1 vs limit 1"
+      },
+      "verdict": "PASS",
+      "notes": "http=200 json=True bytes=507 json=True",
+      "json": true,
+      "extra": {
+        "headerSet": "both headers",
+        "jsonBody": true,
+        "contentType": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "category": "auth",
+      "name": "/events?limit=1 X-Live-Key only",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 1
+      },
+      "http": 200,
+      "bytes": 507,
+      "meta": {
+        "listKey": "items",
+        "count": 1,
+        "firstId": 46983765,
+        "page": 1,
+        "limit": 1,
+        "total": 33,
+        "totalPages": 33,
+        "hasMore": true,
+        "lengthVsLimit": "1 vs limit 1"
+      },
+      "verdict": "PASS",
+      "notes": "http=200 json=True bytes=507 json=True",
+      "json": true,
+      "extra": {
+        "headerSet": "X-Live-Key only",
+        "jsonBody": true,
+        "contentType": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "category": "auth",
+      "name": "/events?limit=1 x-apim-key only",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 1
+      },
+      "http": 403,
+      "bytes": 200,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "Forbidden",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "http=403 json=True bytes=200 json=True contentType=application/json; charset=utf-8",
+      "json": true,
+      "extra": {
+        "headerSet": "x-apim-key only",
+        "jsonBody": true,
+        "contentType": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "category": "auth",
+      "name": "/events?limit=1 no API keys",
+      "path": "events",
+      "params": {
+        "page": 1,
+        "limit": 1
+      },
+      "http": 403,
+      "bytes": 5490,
+      "meta": {
+        "topKeys": [
+          "raw"
+        ]
+      },
+      "verdict": "EXPECTED",
+      "notes": "http=403 json=False bytes=5490 json=False contentType=text/html; charset=UTF-8",
+      "json": false,
+      "extra": {
+        "headerSet": "no API keys",
+        "jsonBody": false,
+        "contentType": "text/html; charset=UTF-8"
+      }
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event detail",
+      "path": "event/14124239",
+      "params": null,
+      "http": 200,
+      "bytes": 3813,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=14124239",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/lineups",
+      "path": "event/14124239/lineups",
+      "params": null,
+      "http": 200,
+      "bytes": 10923,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=14124239",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/statistics",
+      "path": "event/14124239/statistics",
+      "params": null,
+      "http": 200,
+      "bytes": 13100,
+      "meta": {
+        "listKey": "statistics",
+        "count": 4,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS",
+      "notes": "eventId=14124239",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/incidents",
+      "path": "event/14124239/incidents",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 9590,
+      "meta": {
+        "listKey": "incidents",
+        "count": 5,
+        "firstId": 25961100,
+        "page": 1,
+        "limit": 5,
+        "total": 26,
+        "totalPages": 6,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "eventId=14124239",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/best-players",
+      "path": "event/14124239/best-players",
+      "params": null,
+      "http": 200,
+      "bytes": 17216,
+      "meta": {
+        "listKey": "leaderboard",
+        "count": 10,
+        "firstId": 36067796,
+        "page": 1,
+        "limit": 10,
+        "total": 10,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "10 vs limit 10"
+      },
+      "verdict": "PASS",
+      "notes": "eventId=14124239",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "finished event/player-statistics",
+      "path": "event/14124239/player-statistics",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 11747,
+      "meta": {
+        "listKey": "playerStatistics",
+        "count": 5,
+        "firstId": 47474035,
+        "page": 1,
+        "limit": 5,
+        "total": 22,
+        "totalPages": 5,
+        "hasMore": true,
+        "lengthVsLimit": "5 vs limit 5"
+      },
+      "verdict": "PASS",
+      "notes": "eventId=14124239",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event detail",
+      "path": "event/75533566",
+      "params": null,
+      "http": 200,
+      "bytes": 4738,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=75533566",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/lineups",
+      "path": "event/75533566/lineups",
+      "params": null,
+      "http": 200,
+      "bytes": 420,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=75533566",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/statistics",
+      "path": "event/75533566/statistics",
+      "params": null,
+      "http": 200,
+      "bytes": 38,
+      "meta": {
+        "listKey": "statistics",
+        "count": 0,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=75533566",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/incidents",
+      "path": "event/75533566/incidents",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 76,
+      "meta": {
+        "listKey": "incidents",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=75533566",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/best-players",
+      "path": "event/75533566/best-players",
+      "params": null,
+      "http": 404,
+      "bytes": 338,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "NotFound",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "eventId=75533566",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "canceled event/player-statistics",
+      "path": "event/75533566/player-statistics",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 212,
+      "meta": {
+        "listKey": "playerStatistics",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=75533566",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event detail",
+      "path": "event/13888228",
+      "params": null,
+      "http": 200,
+      "bytes": 3735,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=13888228",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/lineups",
+      "path": "event/13888228/lineups",
+      "params": null,
+      "http": 200,
+      "bytes": 421,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=13888228",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/statistics",
+      "path": "event/13888228/statistics",
+      "params": null,
+      "http": 200,
+      "bytes": 38,
+      "meta": {
+        "listKey": "statistics",
+        "count": 0,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=13888228",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/incidents",
+      "path": "event/13888228/incidents",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 76,
+      "meta": {
+        "listKey": "incidents",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=13888228",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/best-players",
+      "path": "event/13888228/best-players",
+      "params": null,
+      "http": 404,
+      "bytes": 338,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "NotFound",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "eventId=13888228",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "notstarted event/player-statistics",
+      "path": "event/13888228/player-statistics",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 212,
+      "meta": {
+        "listKey": "playerStatistics",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=13888228",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "inprogress event detail",
+      "path": "event/58366713",
+      "params": null,
+      "http": 200,
+      "bytes": 3947,
+      "meta": {
+        "topKeys": [
+          "event"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=58366713",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "inprogress event/lineups",
+      "path": "event/58366713/lineups",
+      "params": null,
+      "http": 200,
+      "bytes": 418,
+      "meta": {
+        "topKeys": [
+          "home",
+          "away"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "eventId=58366713",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "inprogress event/statistics",
+      "path": "event/58366713/statistics",
+      "params": null,
+      "http": 200,
+      "bytes": 38,
+      "meta": {
+        "listKey": "statistics",
+        "count": 0,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=58366713",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "inprogress event/incidents",
+      "path": "event/58366713/incidents",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 76,
+      "meta": {
+        "listKey": "incidents",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=58366713",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "inprogress event/best-players",
+      "path": "event/58366713/best-players",
+      "params": null,
+      "http": 404,
+      "bytes": 338,
+      "meta": {
+        "topKeys": [
+          "statusCode",
+          "message",
+          "error",
+          "details",
+          "path",
+          "timestamp",
+          "requestId"
+        ],
+        "error": "NotFound",
+        "messageType": "str"
+      },
+      "verdict": "EXPECTED",
+      "notes": "eventId=58366713",
+      "json": true
+    },
+    {
+      "category": "event_state_variation",
+      "name": "inprogress event/player-statistics",
+      "path": "event/58366713/player-statistics",
+      "params": {
+        "page": 1,
+        "limit": 5
+      },
+      "http": 200,
+      "bytes": 212,
+      "meta": {
+        "listKey": "playerStatistics",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 5,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 5"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "eventId=58366713",
+      "json": true
+    },
+    {
+      "category": "entity_variation",
+      "name": "team events last (Maple Leafs)",
+      "path": "team/58336109/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "bytes": 11549,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "firstId": 14124239,
+        "page": 1,
+        "limit": 3,
+        "total": 1106,
+        "totalPages": 369,
+        "hasMore": true,
+        "lengthVsLimit": "3 vs limit 3"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "entity_variation",
+      "name": "team events last (Montr\u00e9al Canadiens)",
+      "path": "team/67204796/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "bytes": 11201,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "firstId": 73042283,
+        "page": 1,
+        "limit": 3,
+        "total": 1111,
+        "totalPages": 371,
+        "hasMore": true,
+        "lengthVsLimit": "3 vs limit 3"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "entity_variation",
+      "name": "player events last (McDavid)",
+      "path": "player/69552988/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "bytes": 11064,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "firstId": 98151763,
+        "page": 1,
+        "limit": 3,
+        "total": 961,
+        "totalPages": 321,
+        "hasMore": true,
+        "lengthVsLimit": "3 vs limit 3"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "entity_variation",
+      "name": "player events last (Sidney Crosby)",
+      "path": "player/94770949/events/last",
+      "params": {
+        "page": 1,
+        "limit": 3
+      },
+      "http": 200,
+      "bytes": 11198,
+      "meta": {
+        "listKey": "events",
+        "count": 3,
+        "firstId": 43293076,
+        "page": 1,
+        "limit": 3,
+        "total": 991,
+        "totalPages": 331,
+        "hasMore": true,
+        "lengthVsLimit": "3 vs limit 3"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments index",
+      "path": "event/14124239/enrichments",
+      "params": null,
+      "http": 200,
+      "bytes": 934,
+      "meta": {
+        "listKey": "types",
+        "count": 8,
+        "firstId": null,
+        "page": null,
+        "limit": null,
+        "total": null,
+        "totalPages": null,
+        "hasMore": null,
+        "lengthVsLimit": null
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/best_players",
+      "path": "event/14124239/enrichments/best_players",
+      "params": null,
+      "http": 200,
+      "bytes": 17216,
+      "meta": {
+        "listKey": "leaderboard",
+        "count": 10,
+        "firstId": 36067796,
+        "page": 1,
+        "limit": 10,
+        "total": 10,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "10 vs limit 10"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/best_players_summary",
+      "path": "event/14124239/enrichments/best_players_summary",
+      "params": null,
+      "http": 200,
+      "bytes": 23113,
+      "meta": {
+        "listKey": "leaderboard",
+        "count": 10,
+        "firstId": 36067796,
+        "page": 1,
+        "limit": 10,
+        "total": 10,
+        "totalPages": 1,
+        "hasMore": false,
+        "lengthVsLimit": "10 vs limit 10"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/h2h_events",
+      "path": "event/14124239/enrichments/h2h_events",
+      "params": null,
+      "http": 200,
+      "bytes": 18029,
+      "meta": {
+        "listKey": "events",
+        "count": 10,
+        "firstId": 14124239,
+        "page": 1,
+        "limit": 10,
+        "total": 38,
+        "totalPages": 4,
+        "hasMore": true,
+        "lengthVsLimit": "10 vs limit 10"
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/highlights",
+      "path": "event/14124239/enrichments/highlights",
+      "params": null,
+      "http": 200,
+      "bytes": 451,
+      "meta": {
+        "topKeys": [
+          "highlights",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/series",
+      "path": "event/14124239/enrichments/series",
+      "params": null,
+      "http": 200,
+      "bytes": 74,
+      "meta": {
+        "listKey": "events",
+        "count": 0,
+        "firstId": null,
+        "page": 1,
+        "limit": 10,
+        "total": 0,
+        "totalPages": 0,
+        "hasMore": false,
+        "lengthVsLimit": "0 vs limit 10"
+      },
+      "verdict": "PASS_EMPTY",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/shotmap",
+      "path": "event/14124239/enrichments/shotmap",
+      "params": null,
+      "http": 200,
+      "bytes": 14655,
+      "meta": {
+        "topKeys": [
+          "shotmap",
+          "page",
+          "limit",
+          "total",
+          "totalPages",
+          "hasMore"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/team_streaks",
+      "path": "event/14124239/enrichments/team_streaks",
+      "params": null,
+      "http": 200,
+      "bytes": 262,
+      "meta": {
+        "topKeys": [
+          "general",
+          "generalPerLastX",
+          "generalTotal",
+          "head2head",
+          "head2HeadPerLastX",
+          "head2HeadTotal"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    },
+    {
+      "category": "enrichment_type_variation",
+      "name": "event enrichments/votes",
+      "path": "event/14124239/enrichments/votes",
+      "params": null,
+      "http": 200,
+      "bytes": 207,
+      "meta": {
+        "topKeys": [
+          "bothTeamsToScoreVote",
+          "firstTeamToScoreVote",
+          "vote",
+          "whoShouldHaveWonVote"
+        ]
+      },
+      "verdict": "PASS",
+      "notes": "",
+      "json": true
+    }
+  ]
+}
