@@ -6,7 +6,12 @@ export function JsonPanel({ label, result }: { label?: string; result: ProviderR
     <div className="panel">
       {label ? <h2>{label}</h2> : null}
       <p className="meta">
-        <code>{result.endpoint}</code> · HTTP {result.status}
+        {result.endpoint ? (
+          <>
+            <code>{result.endpoint}</code> ·{" "}
+          </>
+        ) : null}
+        HTTP {result.status}
         {result.error ? ` · ${result.error}` : ""}
       </p>
       {result.body == null ? (
