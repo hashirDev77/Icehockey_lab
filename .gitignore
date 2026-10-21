@@ -1,7 +1,5 @@
 node_modules
 dist
 .env
-.vercel
-.pnpm-store
 .DS_Store
 *.log

@@ -1,26 +1,10 @@
 export type Json = Record<string, unknown>;
 
 export interface ProviderResult {
-  endpoint: string;
   status: number;
   body: Json | null;
+  endpoint?: string;
   error?: string;
-}
-
-function errorText(body: Json | null, status: number): string {
-  const raw = body?.message ?? body?.error ?? body?.detail;
-  if (typeof raw === "string" && raw.trim()) return raw;
-  if (Array.isArray(raw)) return raw.map(String).join("; ");
-  if (raw && typeof raw === "object") {
-    const obj = raw as Json;
-    if (typeof obj.message === "string") return obj.message;
-    try {
-      return JSON.stringify(raw);
-    } catch {
-      /* fall through */
-    }
-  }
-  return `Request failed (${status})`;
 }
 
 export async function iceHockeyGet(
@@ -34,25 +18,30 @@ export async function iceHockeyGet(
       if (value !== undefined && value !== "") url.searchParams.set(key, String(value));
     }
   }
+
   const endpoint = `/v1/ice_hockey/${clean}${url.search}`;
-  const response = await fetch(url.toString(), { headers: { accept: "application/json" } });
+  const response = await fetch(url.toString(), {
+    headers: {
+      accept: "application/json",
+      "X-Live-Key": import.meta.env.VITE_MSDATA_LIVE_KEY || "",
+      "x-apim-key": import.meta.env.VITE_MSDATA_API_KEY || "",
+    },
+  });
+
   const text = await response.text();
   let body: Json | null = null;
   if (text) {
     try {
       body = JSON.parse(text) as Json;
     } catch {
-      if (!response.ok && response.status !== 404) {
-        throw new Error(text.slice(0, 200) || `Request failed (${response.status})`);
-      }
-      return { endpoint, status: response.status, body: null, error: "Response was not JSON" };
+      body = null;
     }
   }
-  if (response.status === 404) {
-    return { endpoint, status: 404, body: null };
+
+  if (!response.ok && response.status !== 404) {
+    const message = String(body?.message || body?.error || `Request failed (${response.status})`);
+    throw new Error(message);
   }
-  if (!response.ok) {
-    throw new Error(errorText(body, response.status));
-  }
-  return { endpoint, status: response.status, body };
+
+  return { status: response.status, body: response.status === 404 ? null : body, endpoint };
 }
